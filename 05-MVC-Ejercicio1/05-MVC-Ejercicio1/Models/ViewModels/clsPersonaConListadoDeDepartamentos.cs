@@ -8,10 +8,11 @@ namespace _05_MVC_Ejercicio1.Models.ViewModels
 
     public class clsPersonaConListadoDeDepartamentos: _04_PasarDatosAlControlador.Models.clsPersona
     {
-
+        #region Atrubutos
         public List<clsDepartamento> lista { get; set; }
+        #endregion
 
-
+        #region Constructores
         public clsPersonaConListadoDeDepartamentos() : base()
         {
 
@@ -35,6 +36,7 @@ namespace _05_MVC_Ejercicio1.Models.ViewModels
             this.lista = listado;
 
         }
+        #endregion
 
     }
 }

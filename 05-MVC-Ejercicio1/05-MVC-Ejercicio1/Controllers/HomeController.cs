@@ -8,6 +8,11 @@ namespace _05_MVC_Ejercicio1.Controllers
 {
     public class HomeController : Controller
     {
+
+        /// <summary>
+        /// Action index home controles 
+        /// </summary>
+        /// <returns> Instancia de clsPersonaConListadoDeDepartamentos</returns>
         // GET: Home
         public ActionResult Index()
 
@@ -20,6 +25,12 @@ namespace _05_MVC_Ejercicio1.Controllers
             return View(persona);
         }
 
+
+        /// <summary>
+        /// Action index httpPost Home controller
+        /// </summary>
+        /// <param name="persona"></param>
+        /// <returns> Una nueva vista y una instancia de clsPersonaConNombreDeDepartamento </returns>
         [HttpPost]
         public ActionResult Index(Models.ViewModels.clsPersonaConListadoDeDepartamentos persona)
         {

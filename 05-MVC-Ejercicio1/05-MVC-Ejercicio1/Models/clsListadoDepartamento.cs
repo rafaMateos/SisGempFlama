@@ -7,7 +7,7 @@ namespace _05_MVC_Ejercicio1.Models
 {
     public class clsListadoDepartamento
     {
-
+        #region Metodos
         public List<Models.clsDepartamento> ObtenerListado() {
 
             List<Models.clsDepartamento> list = new List<clsDepartamento>();
@@ -24,5 +24,6 @@ namespace _05_MVC_Ejercicio1.Models
 
             return list;
         }
+        #endregion
     }
 }

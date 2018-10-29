@@ -15,7 +15,6 @@
 
         @using (Html.BeginForm())
         {
-
             <label>
                 Nombre
             </label>@Html.TextBoxFor(persona => persona.nombre)<br />
@@ -46,11 +45,8 @@
             <label>
                 Departamento
             </label>
-           
             @Html.DropDownListFor(x => Model.IdDept, new SelectList(Model.lista, "Id", "Nombre"))
-
-
-
+            //DropDownListFor no se pasa por los egg el id de dep , que grande mi nene
 
             <button type="submit" formmethod="post">Enviar</button>
         }
