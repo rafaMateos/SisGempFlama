@@ -1,0 +1,47 @@
+﻿@model List<_03_MVC_PasarDatosVistaEj1.Models.clsPersona>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ListadoPersonas</title>
+</head>
+<body>
+    <div>
+
+
+        @for (var i = 0; i < Model.Count; i++)
+        {
+
+            <h1>Datos Persona @(i + 1)</h1>
+
+            <div>
+                @Html.DisplayFor(persona => persona[i].nombre)
+            </div>
+
+            <div>
+                @Html.DisplayFor(persona => persona[i].Apellidos)
+            </div>
+
+
+            <div>
+                @Html.DisplayFor(x => x[i].fechaNacimiento)
+            </div>
+
+            <div>
+                @Html.DisplayFor(x => x[i].direccion)
+            </div>
+
+            <div>
+                @Html.DisplayFor(x => x[i].telefono)
+            </div>
+
+        }
+
+    </div>
+</body>
+</html>

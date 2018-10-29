@@ -1,0 +1,61 @@
+﻿@model _05_MVC_Ejercicio1.Models.ViewModels.clsPersonaConListadoDeDepartamentos
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+
+        @using (Html.BeginForm())
+        {
+
+            <label>
+                Nombre
+            </label>@Html.TextBoxFor(persona => persona.nombre)<br />
+
+
+
+            <label>
+                Apellidos
+            </label>@Html.TextBoxFor(persona => persona.Apellidos)<br />
+
+
+            <label>
+                Telefono
+            </label>@Html.TextBoxFor(persona => persona.telefono)<br />
+
+
+
+            <label>
+                Direccion
+            </label>@Html.TextBoxFor(persona => persona.direccion)<br />
+
+
+            <label>
+                FechaNacimiento
+            </label>@Html.TextBoxFor(persona => persona.fechaNacimiento)<br />
+
+
+            <label>
+                Departamento
+            </label>
+           
+            @Html.DropDownListFor(x => Model.IdDept, new SelectList(Model.lista, "Id", "Nombre"))
+
+
+
+
+            <button type="submit" formmethod="post">Enviar</button>
+        }
+
+
+    </div>
+</body>
+</html>

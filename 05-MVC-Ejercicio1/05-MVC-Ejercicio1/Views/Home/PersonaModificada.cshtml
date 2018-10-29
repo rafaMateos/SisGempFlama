@@ -1,0 +1,41 @@
+﻿@model _05_MVC_Ejercicio1.Models.ViewModels.clsPersonaConNombreDeDepartamento
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>PersonaModificada</title>
+</head>
+<body>
+    <div>
+
+        <div>
+            @Html.DisplayFor(persona => persona.nombre)
+        </div>
+        <div>
+            @Html.DisplayFor(persona => persona.Apellidos)
+        </div>
+        <div>
+            @Html.DisplayFor(persona => persona.telefono)
+        </div>
+        <div>
+            @Html.DisplayFor(persona => persona.direccion)
+        </div>
+
+        <div>
+            @Html.DisplayFor(persona => persona.fechaNacimiento)
+        </div>
+
+        <div>
+            @Html.DisplayFor(persona => persona.nombreDepartamento)
+        </div>
+
+
+
+    </div>
+</body>
+</html>

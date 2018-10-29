@@ -1,0 +1,36 @@
+﻿@model _03_MVC_PasarDatosVistaEj1.Models.clsPersona
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+
+
+    <h2>@ViewData["Saludo"]</h2>
+    <h2>La fecha de hoy es @ViewBag.FechaActual</h2>
+
+    <h2>Tus datos nene</h2>
+
+    <ul>
+        <li>Nombre: @Model.nombre</li>
+        <li>Apellidos: @Model.Apellidos</li>
+        <li>Telefono: @Model.telefono</li>
+        <li>Direccion: @Model.direccion</li>
+        <li>Id: @Model.idPersona</li>
+        <li>Id: @Model.fechaNacimiento</li>
+
+    </ul>
+
+    @Html.ActionLink("Que guapo ere", "ListadoPersonas");
+
+
+</body>
+</html>
