@@ -1,0 +1,33 @@
+﻿@model _06_MVC_Ejercicio2.Models.clsSesion
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+
+        
+
+
+        @using (Html.BeginForm())
+        {
+
+            <label>
+                ¿Te conozco?
+            </label> <input type="text" value="@Model.IsLoged.ToString()"><br />
+
+            <button type="submit">Enviar</button>
+        }
+
+
+
+    </div>
+</body>
+</html>
