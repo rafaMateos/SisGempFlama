@@ -97,9 +97,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\clsDepartamento.cs" />
-    <Compile Include="Models\clsListadoDepartamento.cs" />
-    <Compile Include="Models\clsPersona.cs" />
+    <Compile Include="Models\Entidades\clsDepartamento.cs" />
+    <Compile Include="Models\Dal\clsListadoDepartamento.cs" />
+    <Compile Include="Models\Entidades\clsPersona.cs" />
     <Compile Include="Models\ViewModels\clsPersonaConListadoDeDepartamentos.cs" />
     <Compile Include="Models\ViewModels\clsPersonaConNombreDeDepartamento.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -36,6 +36,7 @@ namespace _05_MVC_Ejercicio1.Controllers
         {
             string nombreDep = " ";
 
+            //Cambiar a bucle.
             nombreDep = persona.lista[persona.IdDept - 1].Nombre.ToString();
 
             Models.ViewModels.clsPersonaConNombreDeDepartamento personaDep = 
