@@ -1,0 +1,29 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+        { 
+            <label>
+                Conectado? 1= si 0 = no <br />
+                Estado: @ViewData["Estado"]
+            </label><br />
+            
+            <button type="submit" formmethod="post">Conectar</button>
+
+        }
+
+        @Html.ActionLink("Ir al listadoDePersonas","ListadoPersonas")
+    </div>
+</body>
+</html>
