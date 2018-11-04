@@ -15,28 +15,29 @@
     <p>
         @Html.ActionLink("Create New", "Create")
     </p>
+    
     <table class="table">
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.idPersona)
+                @Html.DisplayNameFor(model => model[0].idPersona)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.nombre)
+                @Html.DisplayNameFor(model => model[0].nombre)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Apellidos)
+                @Html.DisplayNameFor(model => model[0].Apellidos)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.fechaNacimiento)
+                @Html.DisplayNameFor(model => model[0].fechaNacimiento)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.direccion)
+                @Html.DisplayNameFor(model => model[0].direccion)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.telefono)
+                @Html.DisplayNameFor(model => model[0].telefono)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IdDept)
+                @Html.DisplayNameFor(model => model[0].IdDept)
             </th>
             <th></th>
         </tr>
