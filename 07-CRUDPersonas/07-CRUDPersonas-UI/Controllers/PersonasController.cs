@@ -99,6 +99,11 @@ namespace _07_CRUDPersonas_UI.Controllers
 
         }
 
+        /// <summary>
+        /// ActionResult Create a person
+        /// </summary>
+        /// <param name="p"></param>
+        /// <returns></returns>
         [HttpPost]
         public ActionResult Create(clsPersona p)
         {
