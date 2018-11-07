@@ -12,6 +12,7 @@ namespace _07_CRUDPersonas_UI.Controllers
     public class PersonasController : Controller
     {
         // GET: Personas
+
         public ActionResult ListadoCompleto()
         {
             clsListadoPersonas_BL gestora = new clsListadoPersonas_BL();
@@ -28,7 +29,6 @@ namespace _07_CRUDPersonas_UI.Controllers
 
 
             }
-
 
             return View(lista);
         }
@@ -84,7 +84,7 @@ namespace _07_CRUDPersonas_UI.Controllers
             catch (Exception e)
             {
 
-                ViewData["ErrorBorrar"] = "No puedo borrar";
+                ViewData["Error"] = "No puedo borrar";
 
             }
 
@@ -107,9 +107,74 @@ namespace _07_CRUDPersonas_UI.Controllers
         [HttpPost]
         public ActionResult Create(clsPersona p)
         {
+            int filas;
+            clsManejadoraPersona_BL gestora = new clsManejadoraPersona_BL();
+            clsListadoPersonas_BL gestoraListado = new clsListadoPersonas_BL();
+            List<clsPersona> lista = new List<clsPersona>();
+
+
+            try
+            {
+               filas= gestora.CrearPersona_BL(p);
+                ViewData["FilasAfectadas"] = $"Filas afectadas:{filas}";
+                lista = gestoraListado.ListadoPersonas_BL();
+            }
+            catch (Exception e) {
+
+                ViewData["Error"] = "No puedo crear";
+
+            }
+
+            return View("ListadoCompleto",lista);
+
+        }
+
+        public ActionResult Edit(int id) {
+
+            clsPersona Per = new clsPersona();
+            clsManejadoraPersona_BL gestora = new clsManejadoraPersona_BL();
+            Per = gestora.PersonaPorId_BL(id);
+
+
+            return View(Per);
+
+        }
+
+        /// <summary>
+        /// Update a persona nene
+        /// </summary>
+        /// <param name="p"></param>
+        /// <returns></returns>
+        [HttpPost, ActionName("Edit")]
+        public ActionResult Edit(clsPersona p)
+        {
+            int filas;
+            clsManejadoraPersona_BL gestora = new clsManejadoraPersona_BL();
+            clsListadoPersonas_BL gestoraListado = new clsListadoPersonas_BL();
+            List<clsPersona> lista = new List<clsPersona>();
+
+
+            try
+            {
+                filas = gestora.ActualizarPersona_BL(p);
+                ViewData["FilasAfectadas"] = $"Filas afectadas:{filas}";
+                lista = gestoraListado.ListadoPersonas_BL();
+            }
+            catch (Exception e)
+            {
+
+                ViewData["Error"] = "No puedo Actualiza";
+
+            }
+
+            return View("ListadoCompleto", lista);
+
+
+        }
+
+        public ActionResult Details() {
 
             return View();
-
         }
 
     }

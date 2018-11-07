@@ -42,7 +42,7 @@ namespace _07_CRUDPersonas_DAL.Listado
                     oPersona.nombre = (String)miLector["nombrePersona"];
                     oPersona.Apellidos = (String)miLector["apellidosPersona"];
                     oPersona.fechaNacimiento = (DateTime)miLector["fechaNacimiento"];
-                    //oPersona.telefono = (String)miLector["telefono"];
+                    oPersona.telefono = (String)miLector["telefono"];
                     oPersona.direccion = (String)miLector["direccion"];
                     oPersona.IdDept = (int)miLector["IDDepartamento"];
                     ret.Add(oPersona);

@@ -10,7 +10,8 @@ namespace _07_CRUDPersonas_BL.Manejadoras
 {
     public class clsManejadoraPersona_BL
     {
-        public clsPersona PersonaPorId_BL(int id) {
+        public clsPersona PersonaPorId_BL(int id)
+        {
 
             clsManejadoraPersonaDal manejadora = new clsManejadoraPersonaDal();
             clsPersona m = new clsPersona();
@@ -24,12 +25,46 @@ namespace _07_CRUDPersonas_BL.Manejadoras
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public int BorrarPersonaPorId_BL(int id) {
+        public int BorrarPersonaPorId_BL(int id)
+        {
 
             int filas;
             clsManejadoraPersonaDal manejadora = new clsManejadoraPersonaDal();
 
             filas = manejadora.BorrarPersonaPorId_DAL(id);
+
+            return filas;
+
+        }
+
+        /// <summary>
+        /// Funcion la cual nos creara una persona y nos devolvera el numero de filas
+        /// </summary>
+        /// <param name="nPersona"></param>
+        /// <returns>int</returns>
+        public int CrearPersona_BL(clsPersona nPersona)
+        {
+            int filas;
+
+            clsManejadoraPersonaDal gestora = new clsManejadoraPersonaDal();
+            filas = gestora.CrearPersona_DAL(nPersona);
+
+            return filas;
+
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="p"></param>
+        /// <returns></returns>
+        public int ActualizarPersona_BL(clsPersona p){
+
+            int filas;
+
+            clsManejadoraPersonaDal gestora = new clsManejadoraPersonaDal();
+            filas = gestora.ActualizarPersona_DAL(p);
 
             return filas;
 

@@ -38,9 +38,9 @@ namespace _07_CRUD_Personas_DAL.Conexion
             this.server = "serverpersona.database.windows.net";
 
             this.dataBase = "personasDB";
-            this.user = "prueba";
+            this.user = "rmateos";
             //this.pass = "123";
-            this.pass = "123qwerty.";
+            this.pass = "Sevillamalo16";
 
         }
         //Con parámetros por si quisiera cambiar las conexiones
