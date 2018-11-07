@@ -1,0 +1,9 @@
+C:\Users\rmateos\Desktop\Github\SisGempFlama\07-CRUDPersonas\07-CRUDPersonas-DAL\bin\Debug\07-CRUDPersonas-DAL.dll
+C:\Users\rmateos\Desktop\Github\SisGempFlama\07-CRUDPersonas\07-CRUDPersonas-DAL\bin\Debug\07-CRUDPersonas-DAL.pdb
+C:\Users\rmateos\Desktop\Github\SisGempFlama\07-CRUDPersonas\07-CRUDPersonas-DAL\bin\Debug\07-CRUDPersonas-Entidades.dll
+C:\Users\rmateos\Desktop\Github\SisGempFlama\07-CRUDPersonas\07-CRUDPersonas-DAL\bin\Debug\07-CRUDPersonas-Entidades.pdb
+C:\Users\rmateos\Desktop\Github\SisGempFlama\07-CRUDPersonas\07-CRUDPersonas-DAL\obj\Debug\07-CRUDPersonas-DAL.csprojAssemblyReference.cache
+C:\Users\rmateos\Desktop\Github\SisGempFlama\07-CRUDPersonas\07-CRUDPersonas-DAL\obj\Debug\07-CRUDPersonas-DAL.csproj.CoreCompileInputs.cache
+C:\Users\rmateos\Desktop\Github\SisGempFlama\07-CRUDPersonas\07-CRUDPersonas-DAL\obj\Debug\07-CRUDPersonas-DAL.csproj.CopyComplete
+C:\Users\rmateos\Desktop\Github\SisGempFlama\07-CRUDPersonas\07-CRUDPersonas-DAL\obj\Debug\07-CRUDPersonas-DAL.dll
+C:\Users\rmateos\Desktop\Github\SisGempFlama\07-CRUDPersonas\07-CRUDPersonas-DAL\obj\Debug\07-CRUDPersonas-DAL.pdb

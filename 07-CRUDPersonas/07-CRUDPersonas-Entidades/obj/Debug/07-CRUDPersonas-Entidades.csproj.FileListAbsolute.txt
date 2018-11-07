@@ -1,0 +1,6 @@
+C:\Users\rmateos\Desktop\Github\SisGempFlama\07-CRUDPersonas\07-CRUDPersonas-Entidades\bin\Debug\07-CRUDPersonas-Entidades.dll
+C:\Users\rmateos\Desktop\Github\SisGempFlama\07-CRUDPersonas\07-CRUDPersonas-Entidades\bin\Debug\07-CRUDPersonas-Entidades.pdb
+C:\Users\rmateos\Desktop\Github\SisGempFlama\07-CRUDPersonas\07-CRUDPersonas-Entidades\obj\Debug\07-CRUDPersonas-Entidades.csprojAssemblyReference.cache
+C:\Users\rmateos\Desktop\Github\SisGempFlama\07-CRUDPersonas\07-CRUDPersonas-Entidades\obj\Debug\07-CRUDPersonas-Entidades.csproj.CoreCompileInputs.cache
+C:\Users\rmateos\Desktop\Github\SisGempFlama\07-CRUDPersonas\07-CRUDPersonas-Entidades\obj\Debug\07-CRUDPersonas-Entidades.dll
+C:\Users\rmateos\Desktop\Github\SisGempFlama\07-CRUDPersonas\07-CRUDPersonas-Entidades\obj\Debug\07-CRUDPersonas-Entidades.pdb
