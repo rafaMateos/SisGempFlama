@@ -10,13 +10,18 @@ namespace _06_ConexBD.Controllers
     public class HomeController : Controller
     {
         // GET: Home
+
+        /// <summary>
+        /// Action result Index
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Index() {
 
             return View();
         }
 
         /// <summary>
-        /// 
+        /// Action result cuando enviamos el post
         /// </summary>
         /// <returns></returns>
         [HttpPost,ActionName ("Index")]
@@ -56,7 +61,10 @@ namespace _06_ConexBD.Controllers
         }
 
 
-
+        /// <summary>
+        /// Action resutl listado de personas
+        /// </summary>
+        /// <returns></returns>
         public ActionResult ListadoPersonas() {
 
             SqlConnection miConexion = new SqlConnection();
@@ -67,9 +75,9 @@ namespace _06_ConexBD.Controllers
 
             try
             {
-
-                //miConexion.ConnectionString = "server=serverpersona.database.windows.net;database=personasDB;uid=Prueba;pwd=123qwerty.;";
-                miConexion.ConnectionString = "server=serverpersona.database.windows.net;database=personasDB;uid=rmateos;pwd=Sevillamalo16;";
+                 
+                miConexion.ConnectionString = "server=serverpersona.database.windows.net;database=personasDB;uid=Prueba;pwd=123qwerty.;";
+                //miConexion.ConnectionString = "server=serverpersona.database.windows.net;database=personasDB;uid=rmateos;pwd=Sevillamalo16;";
 
                 miConexion.Open();
                 SqlCommand miComando = new SqlCommand("SELECT IDPersona,nombrePersona,apellidosPersona,fechaNacimiento,direccion,IDDepartamento FROM Personas", miConexion); 
