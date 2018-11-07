@@ -93,7 +93,8 @@ namespace _07_CRUDPersonas_UI.Controllers
 
         }
 
-        public ActionResult Create() {
+        public ActionResult Create()
+        {
 
             return View();
 
@@ -115,21 +116,23 @@ namespace _07_CRUDPersonas_UI.Controllers
 
             try
             {
-               filas= gestora.CrearPersona_BL(p);
+                filas = gestora.CrearPersona_BL(p);
                 ViewData["FilasAfectadas"] = $"Filas afectadas:{filas}";
                 lista = gestoraListado.ListadoPersonas_BL();
             }
-            catch (Exception e) {
+            catch (Exception e)
+            {
 
                 ViewData["Error"] = "No puedo crear";
 
             }
 
-            return View("ListadoCompleto",lista);
+            return View("ListadoCompleto", lista);
 
         }
 
-        public ActionResult Edit(int id) {
+        public ActionResult Edit(int id)
+        {
 
             clsPersona Per = new clsPersona();
             clsManejadoraPersona_BL gestora = new clsManejadoraPersona_BL();
@@ -172,9 +175,27 @@ namespace _07_CRUDPersonas_UI.Controllers
 
         }
 
-        public ActionResult Details() {
 
-            return View();
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Details(int id)
+        {
+            clsManejadoraPersona_BL gestora = new clsManejadoraPersona_BL();
+            clsPersona oPersonaDetails = null;
+
+
+            try//Cuidado conex bd
+            {
+              oPersonaDetails=gestora.PersonaPorId_BL(id);
+            }
+            catch (Exception e)
+            {
+                //TODO: Error vista
+            }
+
+            return View(oPersonaDetails);
         }
 
     }
