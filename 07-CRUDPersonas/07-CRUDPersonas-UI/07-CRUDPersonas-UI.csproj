@@ -89,7 +89,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="Views\Personas\EstiloTabla.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -118,7 +117,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="ViewModels\" />
-    <Folder Include="Views\Personas\Estilos\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\07-CRUDPersonas-BL\07-CRUDPersonas-BL.csproj">
