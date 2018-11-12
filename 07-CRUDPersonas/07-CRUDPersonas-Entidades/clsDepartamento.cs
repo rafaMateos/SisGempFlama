@@ -18,6 +18,12 @@ namespace _07_CRUDPersonas_Entidades
             this.Id = Id;
             this.Nombre = Nombre;
     }
+
+        public clsDepartamento()
+        {
+
+
+        }
         #endregion
 
 

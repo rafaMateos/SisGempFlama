@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Listados\clsListadoDept_BL.cs" />
+    <Compile Include="Listados\clsListadoPersonaConNombreDept_BL.cs" />
     <Compile Include="Listados\clsListadoPersonas_BL.cs" />
     <Compile Include="Manejadoras\clsManejadoraPersona_BL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

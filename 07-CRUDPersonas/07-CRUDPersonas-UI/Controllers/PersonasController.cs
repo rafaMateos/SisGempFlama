@@ -1,6 +1,7 @@
 ﻿using _07_CRUDPersonas_BL.Listados;
 using _07_CRUDPersonas_BL.Manejadoras;
 using _07_CRUDPersonas_Entidades;
+using _07_CRUDPersonas_UI.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -196,6 +197,18 @@ namespace _07_CRUDPersonas_UI.Controllers
             }
 
             return View(oPersonaDetails);
+        }
+
+        public ActionResult ListadoCompletoPersonaNombreDept() {
+
+            List<clsPersonaConNombreDeDepartamento> listado = new List<clsPersonaConNombreDeDepartamento>();
+            clsListadoPersonaConNombreDept_BL m = new clsListadoPersonaConNombreDept_BL();
+
+            listado = m.listadoCompletoPersonasConNombreDept_BL();
+
+
+            return View(listado);
+
         }
 
     }

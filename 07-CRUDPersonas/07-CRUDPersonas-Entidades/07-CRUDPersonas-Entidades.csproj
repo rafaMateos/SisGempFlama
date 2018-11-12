@@ -44,6 +44,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="clsDepartamento.cs" />
     <Compile Include="clsPersona.cs" />
+    <Compile Include="clsPersonaConNombreDeDepartamento.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
