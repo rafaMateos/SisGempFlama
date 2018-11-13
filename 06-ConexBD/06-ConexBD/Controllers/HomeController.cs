@@ -33,7 +33,8 @@ namespace _06_ConexBD.Controllers
             try
             {
 
-                miConexion.ConnectionString = "server=serverpersona.database.windows.net;database=personasDB;uid=rmateos;pwd=Sevillamalo16;";
+                //miConexion.ConnectionString = "server=serverpersona.database.windows.net;database=personasDB;uid=rmateos;pwd=Sevillamalo16;";
+                miConexion.ConnectionString = "server=localhost;database=LOTERIAS;uid=prueba;pwd=1234;";
 
                 miConexion.Open();
 
