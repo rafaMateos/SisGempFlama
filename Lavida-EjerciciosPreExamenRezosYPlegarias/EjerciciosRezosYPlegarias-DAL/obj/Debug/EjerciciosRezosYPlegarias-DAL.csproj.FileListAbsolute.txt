@@ -1,0 +1,9 @@
+C:\Users\rmateos\Desktop\Github\SisGempFlama\Lavida-EjerciciosPreExamenRezosYPlegarias\EjerciciosRezosYPlegarias-DAL\bin\Debug\EjerciciosRezosYPlegarias-DAL.dll
+C:\Users\rmateos\Desktop\Github\SisGempFlama\Lavida-EjerciciosPreExamenRezosYPlegarias\EjerciciosRezosYPlegarias-DAL\bin\Debug\EjerciciosRezosYPlegarias-DAL.pdb
+C:\Users\rmateos\Desktop\Github\SisGempFlama\Lavida-EjerciciosPreExamenRezosYPlegarias\EjerciciosRezosYPlegarias-DAL\bin\Debug\EjercicioRezosYPlegarias-Entidades.dll
+C:\Users\rmateos\Desktop\Github\SisGempFlama\Lavida-EjerciciosPreExamenRezosYPlegarias\EjerciciosRezosYPlegarias-DAL\bin\Debug\EjercicioRezosYPlegarias-Entidades.pdb
+C:\Users\rmateos\Desktop\Github\SisGempFlama\Lavida-EjerciciosPreExamenRezosYPlegarias\EjerciciosRezosYPlegarias-DAL\obj\Debug\EjerciciosRezosYPlegarias-DAL.csprojAssemblyReference.cache
+C:\Users\rmateos\Desktop\Github\SisGempFlama\Lavida-EjerciciosPreExamenRezosYPlegarias\EjerciciosRezosYPlegarias-DAL\obj\Debug\EjerciciosRezosYPlegarias-DAL.csproj.CoreCompileInputs.cache
+C:\Users\rmateos\Desktop\Github\SisGempFlama\Lavida-EjerciciosPreExamenRezosYPlegarias\EjerciciosRezosYPlegarias-DAL\obj\Debug\EjerciciosRezosYPlegarias-DAL.csproj.CopyComplete
+C:\Users\rmateos\Desktop\Github\SisGempFlama\Lavida-EjerciciosPreExamenRezosYPlegarias\EjerciciosRezosYPlegarias-DAL\obj\Debug\EjerciciosRezosYPlegarias-DAL.dll
+C:\Users\rmateos\Desktop\Github\SisGempFlama\Lavida-EjerciciosPreExamenRezosYPlegarias\EjerciciosRezosYPlegarias-DAL\obj\Debug\EjerciciosRezosYPlegarias-DAL.pdb

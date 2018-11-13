@@ -1,0 +1,74 @@
+﻿@model Lavida_EjerciciosPreExamenRezosYPlegarias_UI.Views.ViewModel.clsListadoPersonaConListadoDepartamento
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+
+        @using (Html.BeginForm()){
+
+        @Html.DropDownListFor(x => Model.DepSelect, new SelectList(Model.listadoDept, "Id", "Nombre"))
+        
+        <button type="submit" formmethod="post">Enviar</button>
+
+        }
+
+
+
+        @if (Model.listadoPersonaPorDept.Count != 0)
+        {
+
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.listadoPersonaPorDept[0].nombre)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.listadoPersonaPorDept[0].Apellidos)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.listadoPersonaPorDept[0].telefono)
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model.listadoPersonaPorDept)
+                {
+                    <tr>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.nombre)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Apellidos)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.fechaNacimiento)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.telefono)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new {  id=item.idPersona }) |
+                        </td>
+                    </tr>
+                }
+            </table>
+
+
+        }
+
+
+
+    </div>
+</body>
+</html>
