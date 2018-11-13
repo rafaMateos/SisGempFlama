@@ -18,11 +18,9 @@
 
         @Html.DropDownListFor(x => Model.DepSelect, new SelectList(Model.listadoDept, "Id", "Nombre"))
         
-        <button type="submit" formmethod="post">Enviar</button>
+        <input type="submit" value="Enviar" />
 
         }
-
-
 
         @if (Model.listadoPersonaPorDept.Count != 0)
         {

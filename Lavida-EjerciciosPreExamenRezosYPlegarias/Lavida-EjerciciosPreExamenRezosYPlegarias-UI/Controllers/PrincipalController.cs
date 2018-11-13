@@ -1,4 +1,5 @@
-﻿using EjercicioRezosYPlegarias_Entidades.Persistencia;
+﻿using _EjercicioRezosYPlegarias_Entidades.Complejas;
+using EjercicioRezosYPlegarias_Entidades.Persistencia;
 using EjerciciosRezosYPlegarias_BL.Listados;
 using EjerciciosRezosYPlegarias_BL.Manejadoras;
 using Lavida_EjerciciosPreExamenRezosYPlegarias_UI.Views.ViewModel;
@@ -13,8 +14,9 @@ namespace Lavida_EjerciciosPreExamenRezosYPlegarias_UI.Controllers
     public class PrincipalController : Controller
     {
         // GET: Principal
-        public ActionResult Index(int? id)
+        public ActionResult Index(int id = 0)
         {
+
             clsListadoPersonaConListadoDepartamento listadoDep = new clsListadoPersonaConListadoDepartamento();
 
             List<clsPersona> listadoPersona = new List<clsPersona>();
@@ -23,11 +25,25 @@ namespace Lavida_EjerciciosPreExamenRezosYPlegarias_UI.Controllers
             clsListadoPersonas_BL listPer = new clsListadoPersonas_BL();
             clsListadoDepartamentos_BL listado = new clsListadoDepartamentos_BL();
 
-            listadodepartamento = listado.listadoDept_BL();
+            if (id == 0)
+            {
 
-            listadoDep.listadoDept = listadodepartamento;
-            listadoDep.listadoPersonaPorDept = listadoPersona;
+                listadodepartamento = listado.listadoDept_BL();
+                listadoDep.listadoDept = listadodepartamento;
+                listadoDep.listadoPersonaPorDept = listadoPersona;
 
+            }
+            else {
+
+                //Cuidao que no le llega na neneeeeeeeeeeeeeeeeeee
+                listadodepartamento = listado.listadoDept_BL();
+                listadoDep.listadoDept = listadodepartamento;
+                listadoDep.DepSelect = id;
+                listadoDep.listadoPersonaPorDept = listPer.ListadoPersonasPordep_BL(listadoDep.DepSelect);
+               
+
+            }
+            
             return View(listadoDep);
         }
 
@@ -36,20 +52,49 @@ namespace Lavida_EjerciciosPreExamenRezosYPlegarias_UI.Controllers
         public ActionResult Index(clsListadoPersonaConListadoDepartamento model) {
 
             clsListadoDepartamentos_BL listado = new clsListadoDepartamentos_BL();
-            model.listadoDept = listado.listadoDept_BL();
 
             clsListadoPersonas_BL listPer = new clsListadoPersonas_BL();
+
+            model.listadoDept = listado.listadoDept_BL();
             model.listadoPersonaPorDept = listPer.ListadoPersonasPordep_BL(model.DepSelect);
 
             return View(model);
         }
 
+
         public ActionResult Edit(int id) {
 
             clsManejadoraPersona_BL BL = new clsManejadoraPersona_BL();
-            clsPersona oPer;
-            oPer = BL.PersonaPorId_BL(id);
+
+            clsPersonaConNombreDeDepartamento oPer = new clsPersonaConNombreDeDepartamento(); ;
+
+            try
+            {
+                oPer = BL.PersonaConDept_BL(id);
+
+            }
+            catch(Exception e) {
+
+            }
             return View(oPer);
+
+        }
+
+        [HttpPost]
+        public ActionResult Edit(clsPersonaConNombreDeDepartamento NPersona)
+        {
+            clsManejadoraPersona_BL majedora = new clsManejadoraPersona_BL();
+
+            try
+            {
+                majedora.ActualizarPersona_BL(NPersona);
+                ViewData["Actualizar"] = "Actualizado Correctamente";
+            }
+            catch (Exception e) {
+
+                ViewData["Actualizar"] = "Errore";
+            }
+            return View(NPersona);
 
         }
     }

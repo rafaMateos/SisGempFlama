@@ -1,5 +1,4 @@
-﻿@model EjercicioRezosYPlegarias_Entidades.Persistencia.clsPersona
-
+﻿@model _EjercicioRezosYPlegarias_Entidades.Complejas.clsPersonaConNombreDeDepartamento
 @{
     Layout = null;
 }
@@ -13,64 +12,62 @@
 </head>
 <body>
     <div>
-        <h4>clsPersona</h4>
+        <h4>clsPersonaConNombreDeDepartamento</h4>
         <hr />
         <dl class="dl-horizontal">
-            
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.nombre)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.nombre)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.Apellidos)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.Apellidos)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.fechaNacimiento)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.fechaNacimiento)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.direccion)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.direccion)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.telefono)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.telefono)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.IdDept)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.IdDept)
-            </dd>
-    
+
+            @using (Html.BeginForm())
+            {
+                <dd>
+                    @Html.HiddenFor(model => model.idPersona)
+                </dd>
+
+                <dd>
+                    @Html.HiddenFor(model => model.IdDept)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.nombre)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.nombre)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Apellidos)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Apellidos)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.nombreDepartamento)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.nombreDepartamento)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.telefono)
+                </dt>
+
+                <dd>
+                    @Html.EditorFor(model => model.telefono, new { htmlAttributes = new { @class = "form-control" } })
+                </dd>
+
+                <input type="submit" value="Enviar"/>
+
+            }
+
+            @ViewData["Actualizar"];
+
         </dl>
     </div>
-    <p>
-        @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
-        @Html.ActionLink("Back to List", "Index")
+    <p> 
+             @Html.ActionLink("Back to List", "Index" ,new { id = Model.IdDept })
     </p>
 </body>
 </html>

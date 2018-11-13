@@ -1,4 +1,5 @@
-﻿using EjercicioRezosYPlegarias_Entidades.Persistencia;
+﻿using _EjercicioRezosYPlegarias_Entidades.Complejas;
+using EjercicioRezosYPlegarias_Entidades.Persistencia;
 using EjerciciosRezosYPlegarias_DAL.Conexion;
 using System;
 using System.Collections.Generic;
@@ -64,5 +65,77 @@ namespace EjerciciosRezosYPlegarias_DAL.Manejadora
             return oPersona;
 
         }
+
+        public clsPersonaConNombreDeDepartamento PersonaConDept_DAL(int id) {
+
+            clsPersonaConNombreDeDepartamento oPersona = new clsPersonaConNombreDeDepartamento();
+
+            SqlConnection miConexion;
+            SqlCommand miComando = new SqlCommand();
+            SqlDataReader miLector;
+
+            clsMyConnection connection = new clsMyConnection();
+
+            //Try no obligatorio ya que esta en clase myconnection
+            miConexion = connection.getConnection();
+
+            miComando.CommandText = "select IDPersona,nombrePersona,apellidosPersona,telefono,nombreDepartamento,Personas.IDDepartamento from Personas inner join Departamentos on Personas.IDDepartamento = Departamentos.IDDepartamento where Personas.IDPersona = @Id ";
+            miComando.Parameters.Add("@Id", System.Data.SqlDbType.Int).Value = id;
+
+
+            miComando.Connection = miConexion;
+            miLector = miComando.ExecuteReader();
+
+
+            if (miLector.HasRows)
+            {
+
+                while (miLector.Read())
+                {
+                    oPersona.idPersona = (int)miLector["IDPersona"];
+                    oPersona.nombre = (String)miLector["nombrePersona"];
+                    oPersona.Apellidos = (String)miLector["apellidosPersona"];
+                    oPersona.telefono = (String)miLector["telefono"];
+                    oPersona.IdDept = (int)miLector["IDDepartamento"];
+                    oPersona.nombreDepartamento = (string)miLector["nombreDepartamento"];
+
+                }
+            }
+
+            miLector.Close();
+            connection.closeConnection(ref miConexion);
+            return oPersona;
+
+        }
+
+        public int ActualizarPersona_Dal(clsPersonaConNombreDeDepartamento nPersona) {
+
+            int filas;
+
+            SqlConnection miConexion;
+
+            SqlCommand miComando = new SqlCommand();
+
+            clsMyConnection connection = new clsMyConnection();
+
+            miConexion = connection.getConnection();
+            miComando.CommandText = "update Personas set telefono = @telefono where IDPersona = @id";
+            miComando.Connection = miConexion;
+
+            SqlParameter param;
+            param = new SqlParameter();
+
+            miComando.Parameters.Add("@id", System.Data.SqlDbType.Int).Value = nPersona.idPersona;
+            miComando.Parameters.Add("@telefono", System.Data.SqlDbType.VarChar).Value = nPersona.telefono;
+         
+
+            //Tener en cuenta ExecuteNonQuery porque devuelve filas
+            filas = miComando.ExecuteNonQuery();
+
+            return filas;
+
+
+        }
+
     }
 }
