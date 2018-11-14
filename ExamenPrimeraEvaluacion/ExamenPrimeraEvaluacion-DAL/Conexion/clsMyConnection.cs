@@ -34,13 +34,13 @@ namespace ExamenPrimeraEvaluacion_DAL.Conexion
 
         public clsMyConnection()
         {
-            // this.server = "(local)";
-            this.server = "serverpersona.database.windows.net";
+            this.server = "localhost";
+            //this.server = "serverpersona.database.windows.net";
 
-            this.dataBase = "personasDB";
-            this.user = "prueba";
-            //this.pass = "123";
-            this.pass = "123qwerty.";
+            this.dataBase = "lol";
+            this.user = "prueba2";
+            this.pass = "123";
+           //this.pass = "123qwerty.";
 
         }
         //Con parámetros por si quisiera cambiar las conexiones

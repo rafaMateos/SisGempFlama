@@ -1,0 +1,11 @@
+C:\Users\rmateos\Desktop\Github\SisGempFlama\ExamenPrimeraEvaluacion\ExamenPrimeraEvaluacion-BL\bin\Debug\ExamenPrimeraEvaluacion-BL.dll
+C:\Users\rmateos\Desktop\Github\SisGempFlama\ExamenPrimeraEvaluacion\ExamenPrimeraEvaluacion-BL\bin\Debug\ExamenPrimeraEvaluacion-BL.pdb
+C:\Users\rmateos\Desktop\Github\SisGempFlama\ExamenPrimeraEvaluacion\ExamenPrimeraEvaluacion-BL\bin\Debug\ExamenPrimeraEvaluacion-DAL.dll
+C:\Users\rmateos\Desktop\Github\SisGempFlama\ExamenPrimeraEvaluacion\ExamenPrimeraEvaluacion-BL\bin\Debug\ExamenPrimeraEvaluacion-Entidades.dll
+C:\Users\rmateos\Desktop\Github\SisGempFlama\ExamenPrimeraEvaluacion\ExamenPrimeraEvaluacion-BL\bin\Debug\ExamenPrimeraEvaluacion-DAL.pdb
+C:\Users\rmateos\Desktop\Github\SisGempFlama\ExamenPrimeraEvaluacion\ExamenPrimeraEvaluacion-BL\bin\Debug\ExamenPrimeraEvaluacion-Entidades.pdb
+C:\Users\rmateos\Desktop\Github\SisGempFlama\ExamenPrimeraEvaluacion\ExamenPrimeraEvaluacion-BL\obj\Debug\ExamenPrimeraEvaluacion-BL.csprojAssemblyReference.cache
+C:\Users\rmateos\Desktop\Github\SisGempFlama\ExamenPrimeraEvaluacion\ExamenPrimeraEvaluacion-BL\obj\Debug\ExamenPrimeraEvaluacion-BL.csproj.CoreCompileInputs.cache
+C:\Users\rmateos\Desktop\Github\SisGempFlama\ExamenPrimeraEvaluacion\ExamenPrimeraEvaluacion-BL\obj\Debug\ExamenPrimeraEvaluacion-BL.csproj.CopyComplete
+C:\Users\rmateos\Desktop\Github\SisGempFlama\ExamenPrimeraEvaluacion\ExamenPrimeraEvaluacion-BL\obj\Debug\ExamenPrimeraEvaluacion-BL.dll
+C:\Users\rmateos\Desktop\Github\SisGempFlama\ExamenPrimeraEvaluacion\ExamenPrimeraEvaluacion-BL\obj\Debug\ExamenPrimeraEvaluacion-BL.pdb

@@ -1,0 +1,133 @@
+﻿@model ExamenPrimeraEvaluacion_UI.Models.ViewModel.clsViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+        {
+
+            @Html.DropDownListFor(x => Model.perSelect, new SelectList(Model.ListadoPersonajes, "idPersonaje", "nombrePersonaje"))
+
+            <input type="submit" name="edit" value="Editar" />
+
+        }
+
+        @if (Model.perSelect != 0)
+        {
+
+
+            <dl class="dl-horizontal">
+
+                @using (Html.BeginForm())
+                {
+                <dd>
+                    @Html.HiddenFor(model => model.personajeCategoria.idPersonaje)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.personajeCategoria.nombrePersonaje)
+                </dt>
+
+                <dd>
+                    @Html.EditorFor(model => model.personajeCategoria.nombrePersonaje, new { htmlAttributes = new { @class = "form-control" } })
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.personajeCategoria.alias)
+                </dt>
+
+                <dd>
+                    @Html.EditorFor(model => model.personajeCategoria.alias, new { htmlAttributes = new { @class = "form-control" } })
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.personajeCategoria.vida)
+                </dt>
+
+                <dd>
+                    @Html.EditorFor(model => model.personajeCategoria.vida, new { htmlAttributes = new { @class = "form-control" } })
+                </dd>
+
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.personajeCategoria.regeneracion)
+                </dt>
+
+                <dd>
+                    @Html.EditorFor(model => model.personajeCategoria.regeneracion, new { htmlAttributes = new { @class = "form-control" } })
+                </dd>
+
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.personajeCategoria.danno)
+                </dt>
+
+                <dd>
+                    @Html.EditorFor(model => model.personajeCategoria.danno, new { htmlAttributes = new { @class = "form-control" } })
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.personajeCategoria.armadura)
+                </dt>
+
+                <dd>
+                    @Html.EditorFor(model => model.personajeCategoria.armadura, new { htmlAttributes = new { @class = "form-control" } })
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.personajeCategoria.velAtaque)
+                </dt>
+
+                <dd>
+                    @Html.EditorFor(model => model.personajeCategoria.velAtaque, new { htmlAttributes = new { @class = "form-control" } })
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.personajeCategoria.resistencia)
+                </dt>
+
+                <dd>
+                    @Html.EditorFor(model => model.personajeCategoria.resistencia, new { htmlAttributes = new { @class = "form-control" } })
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.personajeCategoria.velMovimiento)
+                </dt>
+
+                <dd>
+                    @Html.EditorFor(model => model.personajeCategoria.velMovimiento, new { htmlAttributes = new { @class = "form-control" } })
+                </dd>
+
+                <dt>
+                    Nombre Categoria
+                </dt>
+
+                <dd>
+                    @Html.DropDownListFor(x => Model.CatSelect, new SelectList(Model.listadoCategorias, "idCategoria", "nombreCategoria"))
+                </dd>
+
+                <input type="submit" name="save" value="Guardar" />
+
+                }
+
+
+            </dl>
+
+
+
+        }
+
+        @ViewData["Result"]
+
+    </div>
+</body>
+</html>

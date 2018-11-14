@@ -42,12 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion\clsMyConnection.cs" />
+    <Compile Include="Listado\clsListadoCategoria_DAL.cs" />
+    <Compile Include="Listado\clsListadoPersonajes_DAL.cs" />
+    <Compile Include="Manejadora\clsManejadoraPersonaje.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Listado\" />
-    <Folder Include="Manejadora\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\ExamenPrimeraEvaluacion-Entidades\ExamenPrimeraEvaluacion-Entidades.csproj">
       <Project>{2ff1153a-c79c-4bcc-b34e-4e2bf2d3141e}</Project>

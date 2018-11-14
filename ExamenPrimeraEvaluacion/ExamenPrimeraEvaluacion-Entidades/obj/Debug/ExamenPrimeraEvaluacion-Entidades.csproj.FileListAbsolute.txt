@@ -1,0 +1,6 @@
+C:\Users\rmateos\Desktop\Github\SisGempFlama\ExamenPrimeraEvaluacion\ExamenPrimeraEvaluacion-Entidades\bin\Debug\ExamenPrimeraEvaluacion-Entidades.dll
+C:\Users\rmateos\Desktop\Github\SisGempFlama\ExamenPrimeraEvaluacion\ExamenPrimeraEvaluacion-Entidades\bin\Debug\ExamenPrimeraEvaluacion-Entidades.pdb
+C:\Users\rmateos\Desktop\Github\SisGempFlama\ExamenPrimeraEvaluacion\ExamenPrimeraEvaluacion-Entidades\obj\Debug\ExamenPrimeraEvaluacion-Entidades.csprojAssemblyReference.cache
+C:\Users\rmateos\Desktop\Github\SisGempFlama\ExamenPrimeraEvaluacion\ExamenPrimeraEvaluacion-Entidades\obj\Debug\ExamenPrimeraEvaluacion-Entidades.csproj.CoreCompileInputs.cache
+C:\Users\rmateos\Desktop\Github\SisGempFlama\ExamenPrimeraEvaluacion\ExamenPrimeraEvaluacion-Entidades\obj\Debug\ExamenPrimeraEvaluacion-Entidades.dll
+C:\Users\rmateos\Desktop\Github\SisGempFlama\ExamenPrimeraEvaluacion\ExamenPrimeraEvaluacion-Entidades\obj\Debug\ExamenPrimeraEvaluacion-Entidades.pdb
