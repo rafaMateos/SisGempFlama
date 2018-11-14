@@ -17,7 +17,7 @@ namespace ExamenPrimeraEvaluacion_BL.Manejadora
         /// </summary>
         /// <param name="id"></param>
         /// <returns>Un personaje</returns>
-        public clsPersonaje BuscarPerPorID_DAL(int id) {
+        public clsPersonaje BuscarPerPorID_BL(int id) {
 
             clsManejadoraPersonaje per = new clsManejadoraPersonaje();
             clsPersonaje ret = new clsPersonaje();

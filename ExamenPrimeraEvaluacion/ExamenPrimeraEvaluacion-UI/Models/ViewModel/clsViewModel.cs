@@ -12,28 +12,21 @@ namespace ExamenPrimeraEvaluacion_UI.Models.ViewModel {
         public List<clsPersonaje> ListadoPersonajes { get; set; }
         public List<clsCategoria> listadoCategorias { get; set; }
         public clsPersonaje personajeCategoria { get; set; }
-        public int perSelect { get; set; }
 
-        public int CatSelect { get; set; }
         #endregion
 
         #region constructores
-
         public clsViewModel() {
 
 
         }
-
-        public clsViewModel(List<clsPersonaje> listadoPer, List<clsCategoria> listadoCateg, clsPersonaje personaje, int perSelect,int catselect) {
+        public clsViewModel(List<clsPersonaje> listadoPer, List<clsCategoria> listadoCateg, clsPersonaje personaje) {
 
             this.ListadoPersonajes = listadoPer;
             this.listadoCategorias = listadoCategorias;
             this.personajeCategoria = personaje;
-            this.perSelect = perSelect;
-            this.CatSelect = catselect;
 
         }
-
         #endregion
 
     }

@@ -16,13 +16,13 @@
         @using (Html.BeginForm())
         {
 
-            @Html.DropDownListFor(x => Model.perSelect, new SelectList(Model.ListadoPersonajes, "idPersonaje", "nombrePersonaje"))
+            @Html.DropDownListFor(x => Model.personajeCategoria.idPersonaje, new SelectList(Model.ListadoPersonajes, "idPersonaje", "nombrePersonaje"))
 
             <input type="submit" name="edit" value="Editar" />
 
         }
 
-        @if (Model.perSelect != 0)
+        @if (Model.personajeCategoria.idPersonaje != 0)
         {
 
 
@@ -112,7 +112,7 @@
                 </dt>
 
                 <dd>
-                    @Html.DropDownListFor(x => Model.CatSelect, new SelectList(Model.listadoCategorias, "idCategoria", "nombreCategoria"))
+                    @Html.DropDownListFor(x => Model.personajeCategoria.idCategoria, new SelectList(Model.listadoCategorias, "idCategoria", "nombreCategoria"))
                 </dd>
 
                 <input type="submit" name="save" value="Guardar" />

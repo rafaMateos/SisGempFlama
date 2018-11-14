@@ -12,7 +12,7 @@ namespace ExamenPrimeraEvaluacion_UI.Controllers
 {
     public class HomeController : Controller
     {
-        // GET: Home
+        //GET: Home
 
             /// <summary>
             /// Action resul de la vista Index
@@ -51,8 +51,12 @@ namespace ExamenPrimeraEvaluacion_UI.Controllers
             clsPersonaje ret = new clsPersonaje();
             clsListadoPersonajes_BL gestoraList = new clsListadoPersonajes_BL();
 
+            //No se hacer los botones, pero supongo que de alguna forma pondremos un iff
+            //y segun el valor guardaremos o mostraremos el campeon. El codigo de guardar esta terminado.
+
             try {
-                model.personajeCategoria = gestora.BuscarPerPorID_DAL(model.perSelect);
+
+                model.personajeCategoria = gestora.BuscarPerPorID_BL(model.personajeCategoria.idPersonaje);
                 model.listadoCategorias = gestoraCat.listadoCat_BL();
                 model.ListadoPersonajes = gestoraList.ListadoPer_BL();
                
@@ -63,40 +67,10 @@ namespace ExamenPrimeraEvaluacion_UI.Controllers
 
             }
 
-           
-           
-
             return View(model);
         }
 
         
-        ///Esta todo el codigo de guardar el personaje pero nose enrtiendo botones
-       
-
-        ///// <summary>
-        ///// Action result boton IndexSave
-        ///// </summary>
-        ///// <returns></returns>
-        //[HttpPost,ActionName("Index")]
-        //public ActionResult IndexSave(clsPersonaje p) {
-
-        //    int filas;
-        //    clsManejadoraPersonaje_BL gestora = new clsManejadoraPersonaje_BL();
-        //    try
-        //    {
-                
-        //        filas = gestora.ActualizarPersonaje_BL(p);
-
-        //        ViewData["Result"] = "Guardado perfecto";
-        //    }
-        //    catch (Exception e) {
-
-        //        ViewData["Result"] = " Error al guardar";
-        //    }
-
-
-        //    return View();
-
-        //}
+        
     }
 }
