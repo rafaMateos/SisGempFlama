@@ -109,6 +109,7 @@
     <Content Include="Views\Personas\Edit.cshtml" />
     <Content Include="Views\Personas\Details.cshtml" />
     <Content Include="Views\Personas\ListadoCompletoPersonaNombreDept.cshtml" />
+    <None Include="Properties\PublishProfiles\07-CRUDPersonas-Rafa - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
