@@ -4,3 +4,9 @@ C:\Users\rmateos\Desktop\Github\SisGempFlama\07-Apirest-Persona\07-ApiRestPerson
 C:\Users\rmateos\Desktop\Github\SisGempFlama\07-Apirest-Persona\07-ApiRestPersona-Entidades\obj\Debug\07-ApiRestPersona-Entidades.csproj.CoreCompileInputs.cache
 C:\Users\rmateos\Desktop\Github\SisGempFlama\07-Apirest-Persona\07-ApiRestPersona-Entidades\obj\Debug\07-ApiRestPersona-Entidades.dll
 C:\Users\rmateos\Desktop\Github\SisGempFlama\07-Apirest-Persona\07-ApiRestPersona-Entidades\obj\Debug\07-ApiRestPersona-Entidades.pdb
+C:\Users\Rafa\Desktop\Github\SisGempFlama\07-Apirest-Persona\07-ApiRestPersona-Entidades\bin\Debug\07-ApiRestPersona-Entidades.dll
+C:\Users\Rafa\Desktop\Github\SisGempFlama\07-Apirest-Persona\07-ApiRestPersona-Entidades\bin\Debug\07-ApiRestPersona-Entidades.pdb
+C:\Users\Rafa\Desktop\Github\SisGempFlama\07-Apirest-Persona\07-ApiRestPersona-Entidades\obj\Debug\07-ApiRestPersona-Entidades.csprojAssemblyReference.cache
+C:\Users\Rafa\Desktop\Github\SisGempFlama\07-Apirest-Persona\07-ApiRestPersona-Entidades\obj\Debug\07-ApiRestPersona-Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Rafa\Desktop\Github\SisGempFlama\07-Apirest-Persona\07-ApiRestPersona-Entidades\obj\Debug\07-ApiRestPersona-Entidades.dll
+C:\Users\Rafa\Desktop\Github\SisGempFlama\07-Apirest-Persona\07-ApiRestPersona-Entidades\obj\Debug\07-ApiRestPersona-Entidades.pdb

@@ -159,7 +159,7 @@ namespace _07_ApiRestPersona_DAL.Manejadoras
             clsMyConnection connection = new clsMyConnection();
 
             miConexion = connection.getConnection();
-            miComando.CommandText = "update Personas set nombrePersona = @nombre,apellidosPersona = @apellidos,fechaNacimiento = @fechaNac,telefono = @telefono,direccion = @direccion,IDDepartamento = @Iddept where IDPersona = @id";
+            miComando.CommandText = "update Personas set nombrePersona = @nombre,apellidosPersona = @apellidos,telefono = @telefono,direccion = @direccion,IDDepartamento = @Iddept where IDPersona = @id";
             miComando.Connection = miConexion;
 
             SqlParameter param;
@@ -169,7 +169,8 @@ namespace _07_ApiRestPersona_DAL.Manejadoras
             miComando.Parameters.Add("@id", System.Data.SqlDbType.Int).Value = p.idPersona;
             miComando.Parameters.Add("@nombre", System.Data.SqlDbType.VarChar).Value = p.nombre;
             miComando.Parameters.Add("@apellidos", System.Data.SqlDbType.VarChar).Value = p.Apellidos;
-            miComando.Parameters.Add("@fechaNac", System.Data.SqlDbType.DateTime).Value = p.fechaNacimiento;
+            //miComando.Parameters.Add("@fechaNac", System.Data.SqlDbType.DateTime).Value = p.fechaNacimiento;
+            
             miComando.Parameters.Add("@telefono", System.Data.SqlDbType.VarChar).Value = p.telefono;
             miComando.Parameters.Add("@direccion", System.Data.SqlDbType.VarChar).Value = p.direccion;
             miComando.Parameters.Add("@Iddept", System.Data.SqlDbType.Int).Value = p.IdDept;
@@ -178,9 +179,7 @@ namespace _07_ApiRestPersona_DAL.Manejadoras
             filas = miComando.ExecuteNonQuery();
 
             return filas;
-
-          
-
+            
 
         }
 

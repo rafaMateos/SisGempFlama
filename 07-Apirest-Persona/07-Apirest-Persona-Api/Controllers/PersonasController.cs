@@ -36,5 +36,26 @@ namespace _07_Apirest_Persona_Api.Controllers
 
         }
 
+        /// <summary>
+        /// Verbo post para poder actualizar una persona
+        /// </summary>
+        /// <param name="persona"></param>
+        public void Post([FromBody]clsPersona persona)
+        {
+            clsManejadoraPersona_BL gestora = new clsManejadoraPersona_BL();
+            gestora.ActualizarPersona_BL(persona);
+        }
+
+        /// <summary>
+        /// Verbo delete para poder borrar una persona en concreto
+        /// </summary>
+        /// <param name="id"></param>
+        public void Delete(int id) {
+
+            clsManejadoraPersona_BL gestora = new clsManejadoraPersona_BL();
+            gestora.BorrarPersonaPorId_BL(id);
+
+        }
+
     }
 }
