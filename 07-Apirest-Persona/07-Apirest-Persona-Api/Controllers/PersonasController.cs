@@ -43,7 +43,18 @@ namespace _07_Apirest_Persona_Api.Controllers
         public void Post([FromBody]clsPersona persona)
         {
             clsManejadoraPersona_BL gestora = new clsManejadoraPersona_BL();
+            gestora.CrearPersona_BL(persona);
+        }
+
+        /// <summary>
+        /// Verbo put para insertar una persona
+        /// </summary>
+        /// <param name="persona"></param>
+        public void Put([FromBody]clsPersona persona) {
+            clsManejadoraPersona_BL gestora = new clsManejadoraPersona_BL();
             gestora.ActualizarPersona_BL(persona);
+
+
         }
 
         /// <summary>
