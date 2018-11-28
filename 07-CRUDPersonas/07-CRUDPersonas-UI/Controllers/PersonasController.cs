@@ -109,26 +109,41 @@ namespace _07_CRUDPersonas_UI.Controllers
         [HttpPost]
         public ActionResult Create(clsPersona p)
         {
+            
             int filas;
             clsManejadoraPersona_BL gestora = new clsManejadoraPersona_BL();
             clsListadoPersonas_BL gestoraListado = new clsListadoPersonas_BL();
             List<clsPersona> lista = new List<clsPersona>();
 
-
-            try
-            {
-                filas = gestora.CrearPersona_BL(p);
-                ViewData["FilasAfectadas"] = $"Filas afectadas:{filas}";
-                lista = gestoraListado.ListadoPersonas_BL();
-            }
-            catch (Exception e)
+            if (ModelState.IsValid)
             {
 
-                ViewData["Error"] = "No puedo crear";
+                try
+                {
+                    filas = gestora.CrearPersona_BL(p);
+                    ViewData["FilasAfectadas"] = $"Filas afectadas:{filas}";
+                    lista = gestoraListado.ListadoPersonas_BL();
+                }
+                catch (Exception e)
+                {
+
+                    ViewData["Error"] = "No puedo crear";
+
+                }
+
+                return View("ListadoCompleto", lista);
+
+
+            }
+            else {
+
+                return View(p);
 
             }
 
-            return View("ListadoCompleto", lista);
+
+
+            
 
         }
 

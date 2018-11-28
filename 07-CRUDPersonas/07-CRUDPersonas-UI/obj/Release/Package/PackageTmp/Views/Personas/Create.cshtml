@@ -9,6 +9,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" type="text/css"/>
     <title>Create</title>
 </head>
 <body>
@@ -25,6 +26,7 @@
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.nombre, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.nombre, "", new { @class = "text-danger" })
+                    
                 </div>
             </div>
     
