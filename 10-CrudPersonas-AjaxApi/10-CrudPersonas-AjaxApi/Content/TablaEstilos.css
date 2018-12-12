@@ -1,0 +1,34 @@
+﻿body {
+  padding: 20px;
+  background: #fafafa;
+  position: relative;
+}
+
+table {
+  width: 840px !important;
+  height: 600px !important;
+  max-height: 600px !important;
+  overflow-y: scroll;
+}
+.success {
+  max-width: 50px;
+  color: #13ce66;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.error {
+  color: #e95062;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.pic {
+  width: 100px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #fff;
+  padding: 10px;
+}
