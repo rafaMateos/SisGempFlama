@@ -19,8 +19,9 @@ function tableCreate(ListadoPersonas) {
     var div = document.getElementById('divDeTabla');
     div.setAttribute('class', 'table-responsive-vertical shadow-z-1');
     var tbl = document.createElement('table');
+    tbl.style.width = '100%';
     tbl.setAttribute('class', 'mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp');
-    tbl.setAttribute('border', '1');
+    tbl.setAttribute('border', '3px');
    
 
     var tbdy = document.createElement('tbody');
@@ -34,7 +35,8 @@ function tableCreate(ListadoPersonas) {
         for (var prop in ListadoPersonas[0]) {
 
             var celda = document.createElement('td');
-            var textocelda = document.createTextNode(ListadoPersonas[i][prop])
+            var textocelda = document.createTextNode(ListadoPersonas[i][prop]);
+            //i == 1 && j == 1 ? celda.setAttribute('padding', '2') : null;
 
 
             celda.appendChild(textocelda);
@@ -45,6 +47,7 @@ function tableCreate(ListadoPersonas) {
         var celdaEditar = document.createElement("td");
         var botonEditar = document.createElement("input");
         botonEditar.setAttribute('name', 'botonEditar');
+        botonEditar.setAttribute('class', 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect');
         botonEditar.setAttribute("type", "button");
         botonEditar.setAttribute("value", "Editar");
         celdaEditar.appendChild(botonEditar);
@@ -55,9 +58,11 @@ function tableCreate(ListadoPersonas) {
 
         var celdaBorrar = document.createElement("td");
         var botonBorrar = document.createElement("input");
-
         botonBorrar.setAttribute("type", "button");
+        botonBorrar.setAttribute("class", "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect");
         botonBorrar.setAttribute("value", "Borrar");
+        celdaBorrar.setAttribute("id", ListadoPersonas[i].idPersona);
+        celdaBorrar.addEventListener("click", clickEditar, false);
         celdaBorrar.appendChild(botonBorrar);
         
         hilera.appendChild(celdaBorrar);

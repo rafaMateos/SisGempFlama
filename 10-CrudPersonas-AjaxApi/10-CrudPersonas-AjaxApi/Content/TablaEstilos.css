@@ -1,5 +1,45 @@
-﻿body {
+﻿
+.modal-header {
+
+    margin:8px;
+}
+
+table th {
+    text-align: center;
+}
+
+table tr {
+    text-align: center;
+   
+}
+
+table td {
+    text-align: center;
+    font-size: 15px;
+    text-align: center;
+
+}
+
+.cajitaTitulo {
+
+    text-align: center;
+    padding-top: 30px;
+    border: 1px solid black;
+    font-size: 60px;
+    background-color: aliceblue;
+    width: auto;
+    height: 100px;
+}
+
+h2 {
+    text-align: center;
+}
+
+
+
+body {
     font-family: Arial, Helvetica, sans-serif;
+   
 }
 
 /* The Modal (background) */
@@ -13,8 +53,8 @@
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    background-color:whitesmoke; /* Fallback color */
+    background-color: whitesmoke; /* Black w/ opacity */
 }
 
 /* Modal Content */
@@ -23,8 +63,8 @@
     background-color: whitesmoke;
     margin: auto;
     padding: 0;
-    border: 1px solid #888;
-    width: 80%;
+    border: 2px solid #888;
+    width: 50%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
@@ -59,7 +99,7 @@
 
 /* The Close Button */
 .close {
-    color: white;
+    color: black;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -74,8 +114,8 @@
 
 .modal-header {
     padding: 2px 16px;
-    background-color: #5cb85c;
-    color: white;
+    background-color: white;
+    color: black;
 }
 
 .modal-body {
