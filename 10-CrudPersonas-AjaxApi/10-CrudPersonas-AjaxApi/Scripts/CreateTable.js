@@ -19,9 +19,9 @@ function tableCreate(ListadoPersonas) {
     var div = document.getElementById('divDeTabla');
     div.setAttribute('class', 'table-responsive-vertical shadow-z-1');
     var tbl = document.createElement('table');
-    tbl.setAttribute('class', 'mdl-data-table mdl-js-data-table mdl-shadow--2dp');
+    tbl.setAttribute('class', 'mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp');
     tbl.setAttribute('border', '1');
-
+   
 
     var tbdy = document.createElement('tbody');
 
@@ -41,14 +41,42 @@ function tableCreate(ListadoPersonas) {
             hilera.appendChild(celda);
           
         }
-        var botonEditar = document.createElement("td");
 
+        var celdaEditar = document.createElement("td");
+        var botonEditar = document.createElement("input");
+        botonEditar.setAttribute('name', 'botonEditar');
+        botonEditar.setAttribute("type", "button");
+        botonEditar.setAttribute("value", "Editar");
+        celdaEditar.appendChild(botonEditar);
+        celdaEditar.setAttribute("id", ListadoPersonas[i].idPersona);
+        celdaEditar.addEventListener("click", clickEditar, false);
+        hilera.appendChild(celdaEditar);
+
+
+        var celdaBorrar = document.createElement("td");
+        var botonBorrar = document.createElement("input");
+
+        botonBorrar.setAttribute("type", "button");
+        botonBorrar.setAttribute("value", "Borrar");
+        celdaBorrar.appendChild(botonBorrar);
+        
+        hilera.appendChild(celdaBorrar);
 
         tbdy.appendChild(hilera);
+
+        //Debemos dar estilo a nuestra tabla despues que este creada obviamente
+        
     }
+
+    //var td = document.getElementsByTagName('td');
+    //td.setAttribute('class', 'mdl-data-table__cell--non-numeric');
+    //var th = document.getElementsByTagName('th');
+    //th.setAttribute('class', 'mdl-data-table__cell--non-numeric');
 
     tbl.appendChild(tbdy);
     document.getElementById('divDeTabla').appendChild(tbl);
+
+   
   
 }
 
@@ -84,8 +112,28 @@ function getListadoPersonas() {
     }
 
     millamada.send();
-    
-
-  
 
 }
+
+function clickEditar() {
+
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the button that opens the modal
+    var btn = document.getElementsByName("botonEditar");
+
+    // When the user clicks the button, open the modal 
+    
+        modal.style.display = "block";
+    
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+}
+
