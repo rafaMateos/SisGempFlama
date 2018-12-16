@@ -43,7 +43,8 @@ body {
 }
 
 /* The Modal (background) */
-.modal {
+.modal, .modalEditar {
+
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -53,12 +54,12 @@ body {
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color:whitesmoke; /* Fallback color */
+    background-color: whitesmoke; /* Fallback color */
     background-color: whitesmoke; /* Black w/ opacity */
 }
 
 /* Modal Content */
-.modal-content {
+.modal-content, .modal-contentEditar {
     position: relative;
     background-color: whitesmoke;
     margin: auto;

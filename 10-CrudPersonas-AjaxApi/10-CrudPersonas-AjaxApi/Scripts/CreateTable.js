@@ -52,17 +52,18 @@ function tableCreate(ListadoPersonas) {
         botonEditar.setAttribute("value", "Editar");
         celdaEditar.appendChild(botonEditar);
         celdaEditar.setAttribute("id", ListadoPersonas[i].idPersona);
-        celdaEditar.addEventListener("click", clickEditar, false);
+        celdaEditar.addEventListener("click", getPersona, false);
         hilera.appendChild(celdaEditar);
 
 
         var celdaBorrar = document.createElement("td");
         var botonBorrar = document.createElement("input");
         botonBorrar.setAttribute("type", "button");
+        botonBorrar.setAttribute("name", "BotonBorrar");
         botonBorrar.setAttribute("class", "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect");
         botonBorrar.setAttribute("value", "Borrar");
         celdaBorrar.setAttribute("id", ListadoPersonas[i].idPersona);
-        celdaBorrar.addEventListener("click", clickEditar, false);
+        celdaBorrar.addEventListener("click", clickBorrar, false);
         celdaBorrar.appendChild(botonBorrar);
         
         hilera.appendChild(celdaBorrar);
@@ -85,12 +86,79 @@ function tableCreate(ListadoPersonas) {
   
 }
 
+function clikEditar(Persona) {
+
+    document.getElementById('Nombre').value = Persona.nombre;
+    document.getElementById('Apellidos').value = Persona.apellidos;
+    document.getElementById('Telefono').value = Persona.telefono;
+    document.getElementById('Direccion').value = Persona.direccion;
+    document.getElementById('Departamento').value = Persona.idDepartamento;
+    
+    // Get the modal
+    var modal = document.getElementById('myModalEditar');
+    var span = document.getElementsByTagName('span');
+    // Get the button that opens the modal
+
+   
+
+    // When the user clicks the button, open the modal 
+
+    modal.style.display = "block";
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        } else if (event.target == si) {
+            modal.style.display = "none";
+            Editar(Persona);
+        }
+
+    }
+}
+
+function Editar(Persona) {
+
+    //var miLlamada = new XMLHttpRequest();
+    //miLlamada.open("PUT", "https://rafaapirestpersona.azurewebsites.net/api/personas/" + idPersona);
+
+    ////Mientras viene
+    //miLlamada.onreadystatechange = function () {
+
+    //    if (miLlamada.readyState < 4) {
+
+    //        //document.getElementById("textoAMostrar").innerHTML = "Sending data..."
+    //    }
+    //    else
+    //        if (miLlamada.readyState == 4 && miLlamada.status == 200) {
+
+    //            //document.getElementById("mensajeOk").innerHTML = "Persona eliminada con exito"       
+    //            inicializaPagina();
+
+
+    //        }
+
+    //};
+
+    //miLlamada.send();
+
+
+    
+}
 
 /*
  Funcion JS la cual hara una llamada a la api y nos devolvera un listado de las personas.
  */
 function getListadoPersonas() {
 
+
+    var divTabla = document.getElementById("divDeTabla");
+    divTabla.removeChild(divTabla.childNodes[0]);
     //alert('Hellow da'):
     var millamada = new XMLHttpRequest();
     //millamada.open('GET', "/Default/Index");
@@ -120,30 +188,133 @@ function getListadoPersonas() {
 
 }
 
-function clickEditar() {
+function getPersona() {
+
+    var id = this.id;
+
+    var Persona = new Object();
+
+    var millamada = new XMLHttpRequest();
+    //millamada.open('GET', "/Default/Index");
+    millamada.open('GET', "https://rafaapirestpersona.azurewebsites.net/api/personas/" + id);
+
+    //Mientras vienen los datos
+    millamada.onreadystatechange = function () {
+
+        var ArrayPersonas;
+
+        //alert(millamada.readyState);
+        if (millamada.readyState < 4) {
+
+            //TODO
+
+        } else if (millamada.readyState == 4 && millamada.status == 200) {
+
+            //var oPersona = new Persona();
+                ArrayPersonas = JSON.parse(millamada.responseText);
+
+                 Persona.idPersona = ArrayPersonas.idPersona;
+            Persona.idDepartamento = ArrayPersonas.idDept;
+                 Persona.nombre = ArrayPersonas.nombre;
+                 Persona.apellidos = ArrayPersonas.Apellidos;
+                 Persona.fechaNacimiento = ArrayPersonas.fechaNacimiento;
+                 Persona.direccion = ArrayPersonas.direccion;
+                 Persona.telefono = ArrayPersonas.telefono;
+           
+    
+                clikEditar(Persona);
+
+        }
+
+    }
+
+    millamada.send();
+   
+
+}
+
+
+
+function clickBorrar() {
+
+    var idPersona = this.id;
 
     // Get the modal
     var modal = document.getElementById('myModal');
     var span = document.getElementsByTagName('span');
     // Get the button that opens the modal
-    
+
 
     // When the user clicks the button, open the modal 
-    
-        modal.style.display = "block";
+
+    modal.style.display = "block";
 
     // When the user clicks on <span> (x), close the modal
     span.onclick = function () {
         modal.style.display = "none";
     }
 
-
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = "none";
+        } else if (event.target == si) {
+
+            modal.style.display = "none";
+            Borrar(idPersona);
         }
     }
+}
+
+   
+
+        function Borrar(idPersona) {
+
+            var miLlamada = new XMLHttpRequest();
+            miLlamada.open("DELETE", "https://rafaapirestpersona.azurewebsites.net/api/personas/" + idPersona);
+
+            //Mientras viene
+            miLlamada.onreadystatechange = function () {
+
+                if (miLlamada.readyState < 4) {
+
+                    //document.getElementById("textoAMostrar").innerHTML = "Sending data..."
+                }
+                else
+                    if (miLlamada.readyState == 4 && miLlamada.status == 204) {
+
+                        //document.getElementById("mensajeOk").innerHTML = "Persona eliminada con exito"      
+                        inicializaPagina();
+                        
+
+
+                    }
+
+            };
+
+           
+
+            miLlamada.send();
+
 
 }
+
+
+class Persona {
+
+    constructor(idPersona, idDepartamento, nombre, apellidos, fechaNacimiento, direccion, telefono) {
+
+        this.idPersona = idPersona;
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.fechaNacimiento = fechaNacimiento;
+        this.direccion = direccion;
+        this.telefono = telefono;
+        this.idDepartamento = idDepartamento;
+
+    }
+
+    
+}
+    
 

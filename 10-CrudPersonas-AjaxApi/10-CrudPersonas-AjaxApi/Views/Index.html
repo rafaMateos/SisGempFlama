@@ -10,31 +10,61 @@
     <title></title>
 </head>
 <body>
-
     <!--Cabecera de la pagina-->
     <header>
         <div class=" cajitaTitulo">
             PersonasList
         </div>
     </header>
-
     <div class="divDeTabla" id="divDeTabla">
     </div>
 
-    <div id="myModal" class="modal">
 
+    <div id="myModal" class="modal">
         <!-- Modal content -->
         <div class="modal-content">
             <div class="modal-header">
                 <span class="close">&times;</span>
                 <h4>¿Estas seguro de que quieres borrarla?</h4>
-                <input value="Aceptar" type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"/>
-                <input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" value="Cancelar" type="button"/>
+                <input id="si" value="Aceptar" type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" />
+                <input id="no" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" value="Cancelar" type="button" />
             </div>
-            
-
+        </div>
     </div>
 
+    <div id="myModalEditar" class="modalEditar">
+        <div class="modal-contentEditar">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h4>Ventana Editar</h4>
+
+                <form action="/action_page.php">
+                    <label for="Nombre">Nombre: </label>
+                    <input type="text" id="Nombre" /><br />
+
+                    <label for="Apellidos">Apellidos: </label>
+                    <input type="text" id="Apellidos"/><br />
+
+                    <label for="Telefono">Telefono: </label>
+                    <input type="text" id="Telefono"/><br />
+
+                    <label for="Direccion">Direccion: </label>
+                    <input type="text" id="Direccion"/><br />
+
+                    <label for="Departamento">Departamento: </label>
+                    <input type="text" id="Departamento"/><br />
+
+                      <div style="margin-top:10px">
+                          <input type="submit" value="Editar" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                          <input id="no" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" value="Cancelar" type="button" />
+                      </div>
+                </form>
+
+               
+               
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
