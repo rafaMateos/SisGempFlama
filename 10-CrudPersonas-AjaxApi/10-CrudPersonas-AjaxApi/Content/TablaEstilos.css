@@ -1,4 +1,5 @@
 ﻿
+
 .modal-header {
 
     margin:8px;
@@ -44,8 +45,7 @@ body {
 }
 
 /* The Modal (background) */
-.modal, .modalEditar {
-
+.modal, .modalEditar, .modalCrear {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -60,7 +60,7 @@ body {
 }
 
 /* Modal Content */
-.modal-content, .modal-contentEditar {
+.modal-content, .modal-contentEditar, .modal-contentCrear {
     position: relative;
     background-color: whitesmoke;
     margin: auto;

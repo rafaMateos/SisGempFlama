@@ -4,6 +4,8 @@ window.onload = inicializaPagina;
 
 function inicializaPagina() {
 
+    //var divTabla = document.getElementById("divDeTabla");
+    //divTabla.removeChild(divTabla.childNodes[0]);
     getListadoPersonas();
 }
 
@@ -25,6 +27,8 @@ function tableCreate(ListadoPersonas) {
    
 
     var tbdy = document.createElement('tbody');
+    var BotonCrear = document.getElementById('Create');
+    BotonCrear.setAttribute("click", clickCrear, false);
 
     for (var i = 0; i < ListadoPersonas.length; i++) {
 
@@ -88,8 +92,10 @@ function tableCreate(ListadoPersonas) {
 
 function clikEditar(Persona) {
 
+    var BotonEditar = document.getElementById('Edit');
+
     document.getElementById('Nombre').value = Persona.nombre;
-    document.getElementById('Apellidos').value = Persona.apellidos;
+    document.getElementById('Apellidos').value = Persona.Apellidos;
     document.getElementById('Telefono').value = Persona.telefono;
     document.getElementById('Direccion').value = Persona.direccion;
     document.getElementById('Departamento').value = Persona.IdDept;
@@ -110,45 +116,71 @@ function clikEditar(Persona) {
         modal.style.display = "none";
     }
 
+    //BotonEditar.onclick = function () {
+    //    modal.style.display = "none";
+    //    //Persona.idPersona = ArrayPersonas.idPersona;
+    //    Persona.IdDept = document.getElementById('Departamento').value;
+    //    Persona.nombre = document.getElementById('Nombre').value;
+    //    Persona.Apellidos = document.getElementById('Apellidos').value;
+    //    //Persona.fechaNacimiento = ArrayPersonas.fechaNacimiento;
+    //    Persona.direccion = document.getElementById('Direccion').value;
+    //    Persona.telefono = document.getElementById('Telefono').value;
+
+    //    Editar(Persona);
+    //}
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
+        
         if (event.target == modal) {
             modal.style.display = "none";
-        } else if (event.target == si) {
+        } else if (event.target == Edit) {
+            
             modal.style.display = "none";
+            //Persona.idPersona = ArrayPersonas.idPersona;
+            Persona.IdDept = document.getElementById('Departamento').value;
+            Persona.nombre = document.getElementById('Nombre').value;
+            Persona.Apellidos = document.getElementById('Apellidos').value;
+            //Persona.fechaNacimiento = ArrayPersonas.fechaNacimiento;
+            Persona.direccion = document.getElementById('Direccion').value;
+            Persona.telefono = document.getElementById('Telefono').value;
             Editar(Persona);
         }
 
     }
+
+   
 }
 
 function Editar(Persona) {
 
-    //var miLlamada = new XMLHttpRequest();
-    //miLlamada.open("PUT", "https://rafaapirestpersona.azurewebsites.net/api/personas/" + idPersona);
 
-    ////Mientras viene
-    //miLlamada.onreadystatechange = function () {
+    var miLlamada = new XMLHttpRequest();
 
-    //    if (miLlamada.readyState < 4) {
+    var json = JSON.stringify(Persona);
 
-    //        //document.getElementById("textoAMostrar").innerHTML = "Sending data..."
-    //    }
-    //    else
-    //        if (miLlamada.readyState == 4 && miLlamada.status == 200) {
-
-    //            //document.getElementById("mensajeOk").innerHTML = "Persona eliminada con exito"       
-    //            inicializaPagina();
-
-
-    //        }
-
-    //};
-
-    //miLlamada.send();
-
-
+    miLlamada.open("PUT", "https://rafaapirestpersona.azurewebsites.net/api/personas/");
+    miLlamada.setRequestHeader('Content-type', 'application/json; charset=utf-8');
     
+
+    //Mientras viene
+    miLlamada.onreadystatechange = function () {
+
+        if (miLlamada.readyState < 4) {
+
+            //document.getElementById("textoAMostrar").innerHTML = "Sending data..."
+        }
+        else
+            if (miLlamada.readyState == 4 && miLlamada.status == 204) {
+
+                //document.getElementById("mensajeOk").innerHTML = "Persona eliminada con exito"       
+                inicializaPagina();
+
+            }
+    };
+
+    miLlamada.send(json);
+
+ 
 }
 
 /*
@@ -159,6 +191,7 @@ function getListadoPersonas() {
 
     var divTabla = document.getElementById("divDeTabla");
     divTabla.removeChild(divTabla.childNodes[0]);
+
     //alert('Hellow da'):
     var millamada = new XMLHttpRequest();
     //millamada.open('GET', "/Default/Index");
@@ -214,9 +247,9 @@ function getPersona() {
                 ArrayPersonas = JSON.parse(millamada.responseText);
 
                  Persona.idPersona = ArrayPersonas.idPersona;
-            Persona.IdDept = ArrayPersonas.IdDept;
+                 Persona.IdDept = ArrayPersonas.IdDept;
                  Persona.nombre = ArrayPersonas.nombre;
-                 Persona.apellidos = ArrayPersonas.Apellidos;
+                 Persona.Apellidos = ArrayPersonas.Apellidos;
                  Persona.fechaNacimiento = ArrayPersonas.fechaNacimiento;
                  Persona.direccion = ArrayPersonas.direccion;
                  Persona.telefono = ArrayPersonas.telefono;
@@ -234,6 +267,75 @@ function getPersona() {
 }
 
 
+
+function clickCrear() {
+
+    var modal = document.getElementById('myModalCrear');
+    var span = document.getElementsByTagName('span');
+    // Get the button that opens the modal
+
+
+    // When the user clicks the button, open the modal 
+
+    modal.style.display = "block";
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        } else if (event.target == crear) {
+            
+            modal.style.display = "none";
+            var Persona = new Object();
+            //Persona.idPersona = ArrayPersonas.idPersona;
+            Persona.IdDept = document.getElementById('DepartamentoCrear').value;
+            Persona.nombre = document.getElementById('NombreCrear').value;
+            Persona.Apellidos = document.getElementById('ApellidosCrear').value;
+            var dt = new Date('8/24/2009');
+            Persona.fechaNacimiento = dt;
+            Persona.direccion = document.getElementById('DireccionCrear').value;
+            Persona.telefono = document.getElementById('TelefonoCrear').value;
+
+            Crear(Persona);
+        }
+    }
+}
+
+function Crear(Persona) {
+
+    var miLlamada = new XMLHttpRequest();
+
+    var json = JSON.stringify(Persona);
+
+    miLlamada.open("POST", "https://rafaapirestpersona.azurewebsites.net/api/personas/");
+    miLlamada.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+
+
+    //Mientras viene
+    miLlamada.onreadystatechange = function () {
+
+        if (miLlamada.readyState < 4) {
+
+            //document.getElementById("textoAMostrar").innerHTML = "Sending data..."
+        }
+        else
+            if (miLlamada.readyState == 4 && miLlamada.status == 204) {
+
+                //document.getElementById("mensajeOk").innerHTML = "Persona eliminada con exito"       
+                inicializaPagina();
+
+            }
+    };
+
+    miLlamada.send(json);
+
+
+}
 
 function clickBorrar() {
 
@@ -259,7 +361,7 @@ function clickBorrar() {
         if (event.target == modal) {
             modal.style.display = "none";
         } else if (event.target == si) {
-
+          
             modal.style.display = "none";
             Borrar(idPersona);
         }
@@ -302,11 +404,11 @@ function clickBorrar() {
 
 class Persona {
 
-    constructor(idPersona, IdDept, nombre, apellidos, fechaNacimiento, direccion, telefono) {
+    constructor(idPersona, IdDept, nombre, Apellidos, fechaNacimiento, direccion, telefono) {
 
         this.idPersona = idPersona;
         this.nombre = nombre;
-        this.apellidos = apellidos;
+        this.Apellidos = Apellidos;
         this.fechaNacimiento = fechaNacimiento;
         this.direccion = direccion;
         this.telefono = telefono;

@@ -16,6 +16,10 @@
             PersonasList
         </div>
     </header>
+
+    <div style="margin:10px">
+        <input id="Create" value="+" type="button" class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored" onclick="clickCrear()" />
+    </div>
     <div class="divDeTabla" id="divDeTabla">
     </div>
 
@@ -36,35 +40,67 @@
         <div class="modal-contentEditar">
             <div class="modal-header">
                 <span class="close">&times;</span>
-                <h4>Ventana Editar</h4>
+                <h4>Ventana Crear</h4>
 
                 <form action="/action_page.php">
                     <label for="Nombre">Nombre: </label>
-                    <input type="text" id="Nombre" /><br />
+                    <input class="mdl-textfield__input" type="text" id="Nombre" /><br />
 
                     <label for="Apellidos">Apellidos: </label>
-                    <input type="text" id="Apellidos"/><br />
+                    <input class="mdl-textfield__input" type="text" id="Apellidos" /><br />
 
                     <label for="Telefono">Telefono: </label>
-                    <input type="text" id="Telefono"/><br />
+                    <input class="mdl-textfield__input" type="text" id="Telefono" /><br />
 
                     <label for="Direccion">Direccion: </label>
-                    <input type="text" id="Direccion"/><br />
+                    <input class="mdl-textfield__input" type="text" id="Direccion" /><br />
 
                     <label for="Departamento">Departamento: </label>
-                    <input type="text" id="Departamento"/><br />
+                    <input class="mdl-textfield__input" type="text" id="Departamento" /><br />
 
-                      <div style="margin-top:10px">
-                          <input type="submit" value="Editar" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
-                          <input id="no" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" value="Cancelar" type="button" />
-                      </div>
+                    <div style="margin-top:10px">
+                        <input id="Edit" type="button" value="Editar" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                        <input id="NoEdit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" value="Cancelar" type="button" />
+                    </div>
                 </form>
 
-               
-               
+
+
             </div>
         </div>
     </div>
 
+
+    <div id="myModalCrear" class="modalCrear">
+        <div class="modal-contentCrear">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h4>Ventana Editar</h4>
+
+                <form>
+                    <label for="Nombre">Nombre: </label>
+                    <input class="mdl-textfield__input" type="text" id="NombreCrear" /><br />
+
+                    <label for="Apellidos">Apellidos: </label>
+                    <input class="mdl-textfield__input" type="text" id="ApellidosCrear" /><br />
+
+                    <label for="Telefono">Telefono: </label>
+                    <input class="mdl-textfield__input" type="text" id="TelefonoCrear" /><br />
+
+                    <label for="Direccion">Direccion: </label>
+                    <input class="mdl-textfield__input" type="text" id="DireccionCrear" /><br />
+
+                    <label for="Departamento">Departamento: </label>
+                    <input class="mdl-textfield__input" type="text" id="DepartamentoCrear" /><br />
+
+                    <div style="margin-top:10px">
+                        <input id="crear" type="button" value="Crear" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                        <input id="NoCrear" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" value="Cancelar" type="button" />
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
 </body>
 </html>
