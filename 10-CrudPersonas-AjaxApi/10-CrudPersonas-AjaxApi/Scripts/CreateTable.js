@@ -92,7 +92,7 @@ function clikEditar(Persona) {
     document.getElementById('Apellidos').value = Persona.apellidos;
     document.getElementById('Telefono').value = Persona.telefono;
     document.getElementById('Direccion').value = Persona.direccion;
-    document.getElementById('Departamento').value = Persona.idDepartamento;
+    document.getElementById('Departamento').value = Persona.IdDept;
     
     // Get the modal
     var modal = document.getElementById('myModalEditar');
@@ -214,7 +214,7 @@ function getPersona() {
                 ArrayPersonas = JSON.parse(millamada.responseText);
 
                  Persona.idPersona = ArrayPersonas.idPersona;
-            Persona.idDepartamento = ArrayPersonas.idDept;
+            Persona.IdDept = ArrayPersonas.IdDept;
                  Persona.nombre = ArrayPersonas.nombre;
                  Persona.apellidos = ArrayPersonas.Apellidos;
                  Persona.fechaNacimiento = ArrayPersonas.fechaNacimiento;
@@ -302,7 +302,7 @@ function clickBorrar() {
 
 class Persona {
 
-    constructor(idPersona, idDepartamento, nombre, apellidos, fechaNacimiento, direccion, telefono) {
+    constructor(idPersona, IdDept, nombre, apellidos, fechaNacimiento, direccion, telefono) {
 
         this.idPersona = idPersona;
         this.nombre = nombre;
@@ -310,7 +310,7 @@ class Persona {
         this.fechaNacimiento = fechaNacimiento;
         this.direccion = direccion;
         this.telefono = telefono;
-        this.idDepartamento = idDepartamento;
+        this.IdDept = IdDept;
 
     }
 
