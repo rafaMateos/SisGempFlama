@@ -67,8 +67,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\jefe.png" />
+    <Content Include="Content\load.gif" />
     <Content Include="Content\TablaEstilos.css" />
     <Content Include="Scripts\CreateTable.js" />
+    <Content Include="Scripts\JqueryProbando.js" />
     <Content Include="Views\Index.html" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -77,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\CrudPersonasAjax - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

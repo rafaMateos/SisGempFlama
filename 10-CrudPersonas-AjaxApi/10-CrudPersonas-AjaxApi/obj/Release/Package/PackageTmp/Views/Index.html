@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="../Content/TablaEstilos.css" rel="stylesheet" />
+    <script src="../Scripts/CreateTable.js"></script>
+    <script src="../Scripts/JqueryProbando.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <title></title>
+</head>
+<body>
+    <!--Cabecera de la pagina-->
+    <header>
+        <div id="cajitaTituloo" class="cajitaTitulo">
+            PersonasList
+        </div>
+    </header>
+
+
+
+    <div class="gifi" id="ff">
+        <img id="gif" src="../Content/load.gif" />
+    </div>
+
+
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h4>¿Estas seguro de que quieres borrarla?</h4>
+                <input id="si" value="Aceptar" type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" />
+                <input id="no" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" value="Cancelar" type="button" />
+            </div>
+        </div>
+    </div>
+
+    <div id="myModalEditar" class="modalEditar">
+        <div class="modal-contentEditar">
+            <div class="modal-header">
+                <span id="cerrar" class="close">&times;</span>
+                <h4>Ventana Editar</h4>
+
+                <form action="/action_page.php">
+                    <label for="Nombre">Nombre: </label>
+                    <input class="mdl-textfield__input" type="text" id="Nombre" /><br />
+
+                    <label for="Apellidos">Apellidos: </label>
+                    <input class="mdl-textfield__input" type="text" id="Apellidos" /><br />
+
+                    <label for="Telefono">Telefono: </label>
+                    <input class="mdl-textfield__input" type="text" id="Telefono" /><br />
+
+                    <label for="Direccion">Direccion: </label>
+                    <input class="mdl-textfield__input" type="text" id="Direccion" /><br />
+
+                    <label for="Departamento">Departamento: </label>
+                    <input class="mdl-textfield__input" type="text" id="Departamento" /><br />
+
+                    <div style="margin-top:10px">
+                        <input id="Edit" type="button" value="Editar" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
+                        <input id="NoEdit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" value="Cancelar" type="button" />
+                    </div>
+                </form>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <div id="myModalCrear" class="modalCrear">
+        <div class="modal-contentCrear">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h4>Ventana Crear</h4>
+                <form>
+                    <label for="Nombre">Nombre: </label>
+                    <input class="mdl-textfield__input" type="text" id="NombreCrear" /><br />
+
+                    <label for="Apellidos">Apellidos: </label>
+                    <input class="mdl-textfield__input" type="text" id="ApellidosCrear" /><br />
+
+                    <label for="Telefono">Telefono: </label>
+                    <input class="mdl-textfield__input" type="text" id="TelefonoCrear" /><br />
+
+                    <label for="Direccion">Direccion: </label>
+                    <input class="mdl-textfield__input" type="text" id="DireccionCrear" /><br />
+
+                    <label for="Departamento">Departamento: </label>
+                    <input class="mdl-textfield__input" type="text" id="DepartamentoCrear" /><br />
+
+                    <div style="margin-top:10px">
+                        <input id="crear" type="button" value="Crear" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
+                        <input id="NoCrear" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" value="Cancelar" type="button" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="flotaflama">
+
+        <div class="flota" style="margin:10px">
+            <input id="Create" value="+" type="button" class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored" onclick="clickCrear()" />
+        </div>
+    </div>
+
+
+    <div class="divDeTabla" id="divDeTabla">
+    </div>
+
+   
+
+    
+</body>
+</html>

@@ -10,9 +10,7 @@ function inicializaPagina() {
 }
 
 /*
- 
- Funcion ejemplo para crear una tabla
-
+ Funcion para crear una tabla
  */ 
 
 function tableCreate(ListadoPersonas) {
@@ -21,7 +19,8 @@ function tableCreate(ListadoPersonas) {
     var div = document.getElementById('divDeTabla');
     div.setAttribute('class', 'table-responsive-vertical shadow-z-1');
     var tbl = document.createElement('table');
-    tbl.style.width = '100%';
+    tbl.style.width = '90%';
+    tbl.style.margin = '0 auto';
     tbl.setAttribute('class', 'mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp');
     tbl.setAttribute('border', '3px');
    
@@ -35,6 +34,14 @@ function tableCreate(ListadoPersonas) {
         //Añadimos las filas segun la longitud del array
         //Al crear las filas tenemos que tener en cuenta la cantidad de personas que vamos a tener en nuestro array.
         var hilera = document.createElement('tr');
+
+        //<img width="50" height="50" src="../Content/jefe.png" />
+        var celdaImagen = document.createElement("img");
+        celdaImagen.setAttribute('src', '../Content/jefe.png');
+        celdaImagen.setAttribute('width', '40');
+        celdaImagen.setAttribute('height', '40');
+
+        hilera.appendChild(celdaImagen);
 
         for (var prop in ListadoPersonas[0]) {
 
@@ -51,20 +58,20 @@ function tableCreate(ListadoPersonas) {
         var celdaEditar = document.createElement("td");
         var botonEditar = document.createElement("input");
         botonEditar.setAttribute('name', 'botonEditar');
-        botonEditar.setAttribute('class', 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect');
+        botonEditar.setAttribute('class', 'mdl-button mdl-js-button mdl-button--raised mdl-button--accent');
         botonEditar.setAttribute("type", "button");
         botonEditar.setAttribute("value", "Editar");
         celdaEditar.appendChild(botonEditar);
         celdaEditar.setAttribute("id", ListadoPersonas[i].idPersona);
         celdaEditar.addEventListener("click", getPersona, false);
         hilera.appendChild(celdaEditar);
-
+       
 
         var celdaBorrar = document.createElement("td");
         var botonBorrar = document.createElement("input");
         botonBorrar.setAttribute("type", "button");
         botonBorrar.setAttribute("name", "BotonBorrar");
-        botonBorrar.setAttribute("class", "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect");
+        botonBorrar.setAttribute("class", "mdl-button mdl-js-button mdl-button--raised mdl-button--colored");
         botonBorrar.setAttribute("value", "Borrar");
         celdaBorrar.setAttribute("id", ListadoPersonas[i].idPersona);
         celdaBorrar.addEventListener("click", clickBorrar, false);
@@ -73,9 +80,7 @@ function tableCreate(ListadoPersonas) {
         hilera.appendChild(celdaBorrar);
 
         tbdy.appendChild(hilera);
-
         //Debemos dar estilo a nuestra tabla despues que este creada obviamente
-        
     }
 
     //var td = document.getElementsByTagName('td');
@@ -86,12 +91,15 @@ function tableCreate(ListadoPersonas) {
     tbl.appendChild(tbdy);
     document.getElementById('divDeTabla').appendChild(tbl);
 
+    document.getElementById('gif').setAttribute('hidden', 'hidden');
+
    
   
 }
 
 function clikEditar(Persona) {
 
+   
     var BotonEditar = document.getElementById('Edit');
 
     document.getElementById('Nombre').value = Persona.nombre;
@@ -151,6 +159,16 @@ function clikEditar(Persona) {
    
 }
 
+function limpiar() {
+
+    document.getElementById('NombreCrear').value = " ";
+    document.getElementById('ApellidosCrear').value = " ";
+    document.getElementById('TelefonoCrear').value = " ";
+    document.getElementById('DireccionCrear').value = " ";
+    document.getElementById('DepartamentoCrear').value = " ";
+
+}
+
 function Editar(Persona) {
 
 
@@ -172,8 +190,12 @@ function Editar(Persona) {
         else
             if (miLlamada.readyState == 4 && miLlamada.status == 204) {
 
+                var popup = document.getElementById("ff");
+                popup.classList.toggle("show");
+
                 //document.getElementById("mensajeOk").innerHTML = "Persona eliminada con exito"       
                 inicializaPagina();
+                
 
             }
     };
@@ -212,6 +234,7 @@ function getListadoPersonas() {
             //var oPersona = new Persona();
             ArrayPersonas = JSON.parse(millamada.responseText);
             tableCreate(ArrayPersonas);
+           
         
         }
         
@@ -270,6 +293,8 @@ function getPersona() {
 
 function clickCrear() {
 
+   
+
     var modal = document.getElementById('myModalCrear');
     var span = document.getElementsByTagName('span');
     // Get the button that opens the modal
@@ -325,7 +350,7 @@ function Crear(Persona) {
         }
         else
             if (miLlamada.readyState == 4 && miLlamada.status == 204) {
-
+                limpiar();
                 //document.getElementById("mensajeOk").innerHTML = "Persona eliminada con exito"       
                 inicializaPagina();
 
