@@ -1,5 +1,5 @@
 ﻿
-//Aqui cargamos 
+//Aqui cargamos al iniciar la pagina
 window.onload = inicializaPagina;
 
 function inicializaPagina() {
@@ -13,6 +13,11 @@ function inicializaPagina() {
  Funcion para crear una tabla
  */ 
 
+
+/**
+ * Funcion la cual creara la tabla en funcion de la cantidad de elementos que obtengamos de la API.
+ * @param {any} ListadoPersonas
+ */
 function tableCreate(ListadoPersonas) {
 
     // var body = document.getElementsByTagName('body')[0];//Cogemos el primer elemento del array para que solo haya un body
@@ -97,6 +102,10 @@ function tableCreate(ListadoPersonas) {
   
 }
 
+/**
+ * Funcion la cual nos mostrara un mostrara el modal con los datos de la persona que queramos editar
+ * @param {any} Persona
+ */
 function clikEditar(Persona) {
 
    
@@ -124,18 +133,7 @@ function clikEditar(Persona) {
         modal.style.display = "none";
     }
 
-    //BotonEditar.onclick = function () {
-    //    modal.style.display = "none";
-    //    //Persona.idPersona = ArrayPersonas.idPersona;
-    //    Persona.IdDept = document.getElementById('Departamento').value;
-    //    Persona.nombre = document.getElementById('Nombre').value;
-    //    Persona.Apellidos = document.getElementById('Apellidos').value;
-    //    //Persona.fechaNacimiento = ArrayPersonas.fechaNacimiento;
-    //    Persona.direccion = document.getElementById('Direccion').value;
-    //    Persona.telefono = document.getElementById('Telefono').value;
-
-    //    Editar(Persona);
-    //}
+   
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
         
@@ -159,6 +157,7 @@ function clikEditar(Persona) {
    
 }
 
+/*Funcion que limpia el registro de entrada del usuario*/ 
 function limpiar() {
 
     document.getElementById('NombreCrear').value = " ";
@@ -169,6 +168,10 @@ function limpiar() {
 
 }
 
+/**
+ * Funcion de llamada a la api , con el fin de editar una persona
+ * @param {any} Persona
+ */
 function Editar(Persona) {
 
 
@@ -244,6 +247,7 @@ function getListadoPersonas() {
 
 }
 
+/*Funcion JS la cual realizara una llamada a la API y nos devolvera una persona en concreto*/ 
 function getPersona() {
 
     var id = this.id;
@@ -290,7 +294,7 @@ function getPersona() {
 }
 
 
-
+/*Funcion JS la cual nos mostrara un modal con campos a rellenar para introducir una persona*/ 
 function clickCrear() {
 
    
@@ -331,6 +335,10 @@ function clickCrear() {
     }
 }
 
+/**
+ * Funcion JS la cual nos introducira una persona en la API.
+ * @param {any} Persona
+ */
 function Crear(Persona) {
 
     var miLlamada = new XMLHttpRequest();
@@ -362,6 +370,7 @@ function Crear(Persona) {
 
 }
 
+/*FuncionJS la cual nos mostrar un modal de confirmacion para borrar a una persona*/ 
 function clickBorrar() {
 
     var idPersona = this.id;
@@ -395,6 +404,10 @@ function clickBorrar() {
 
    
 
+/**
+ * Funcion JS la cual nos borrara una persona de la API
+ * @param {any} idPersona
+ */
         function Borrar(idPersona) {
 
             var miLlamada = new XMLHttpRequest();
@@ -427,6 +440,7 @@ function clickBorrar() {
 }
 
 
+/*Clase persona*/ 
 class Persona {
 
     constructor(idPersona, IdDept, nombre, Apellidos, fechaNacimiento, direccion, telefono) {

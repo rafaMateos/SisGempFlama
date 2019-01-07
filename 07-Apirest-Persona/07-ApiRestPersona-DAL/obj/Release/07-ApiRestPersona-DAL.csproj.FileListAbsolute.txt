@@ -7,3 +7,12 @@ C:\Users\rmateos\Desktop\Github\SisGempFlama\07-Apirest-Persona\07-ApiRestPerson
 C:\Users\rmateos\Desktop\Github\SisGempFlama\07-Apirest-Persona\07-ApiRestPersona-DAL\obj\Release\07-ApiRestPersona-DAL.csproj.CopyComplete
 C:\Users\rmateos\Desktop\Github\SisGempFlama\07-Apirest-Persona\07-ApiRestPersona-DAL\obj\Release\07-ApiRestPersona-DAL.dll
 C:\Users\rmateos\Desktop\Github\SisGempFlama\07-Apirest-Persona\07-ApiRestPersona-DAL\obj\Release\07-ApiRestPersona-DAL.pdb
+D:\Github\SisGempFlama\07-Apirest-Persona\07-ApiRestPersona-DAL\bin\Release\07-ApiRestPersona-DAL.dll
+D:\Github\SisGempFlama\07-Apirest-Persona\07-ApiRestPersona-DAL\bin\Release\07-ApiRestPersona-DAL.pdb
+D:\Github\SisGempFlama\07-Apirest-Persona\07-ApiRestPersona-DAL\bin\Release\07-ApiRestPersona-Entidades.dll
+D:\Github\SisGempFlama\07-Apirest-Persona\07-ApiRestPersona-DAL\bin\Release\07-ApiRestPersona-Entidades.pdb
+D:\Github\SisGempFlama\07-Apirest-Persona\07-ApiRestPersona-DAL\obj\Release\07-ApiRestPersona-DAL.csprojAssemblyReference.cache
+D:\Github\SisGempFlama\07-Apirest-Persona\07-ApiRestPersona-DAL\obj\Release\07-ApiRestPersona-DAL.csproj.CoreCompileInputs.cache
+D:\Github\SisGempFlama\07-Apirest-Persona\07-ApiRestPersona-DAL\obj\Release\07-ApiRestPersona-DAL.csproj.CopyComplete
+D:\Github\SisGempFlama\07-Apirest-Persona\07-ApiRestPersona-DAL\obj\Release\07-ApiRestPersona-DAL.dll
+D:\Github\SisGempFlama\07-Apirest-Persona\07-ApiRestPersona-DAL\obj\Release\07-ApiRestPersona-DAL.pdb

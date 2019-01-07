@@ -16,10 +16,10 @@ namespace _07_Apirest_Persona_Api.Controllers
         /// Verbo get para peticiones de un listado completo de personas
         /// </summary>
         /// <returns>List--Listado completo de personas</returns>
-        public List<clsPersona> Get() {
+        public List<clsPersonaConNombreDeDepartamento> Get() {
 
-            clsListadoPersonas_BL listado = new clsListadoPersonas_BL();
-            return listado.ListadoPersonas_BL();
+            clsListadoPersonaConNombreDept_BL listado = new clsListadoPersonaConNombreDept_BL();
+            return listado.listadoCompletoPersonasConNombreDept_BL();
 
         }
 
@@ -35,6 +35,8 @@ namespace _07_Apirest_Persona_Api.Controllers
             return maneja.PersonaPorId_BL(id);
 
         }
+
+       
 
         /// <summary>
         /// Verbo post para poder actualizar una persona
