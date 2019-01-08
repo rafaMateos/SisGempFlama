@@ -108,6 +108,10 @@ function tableCreate(ListadoPersonas) {
  */
 function clikEditar(Persona) {
 
+    var selector = document.getElementById('mySelect');
+
+    selector.options[Persona.IdDept].selected = true;
+
    
     var BotonEditar = document.getElementById('Edit');
 
@@ -115,11 +119,11 @@ function clikEditar(Persona) {
     document.getElementById('Apellidos').value = Persona.Apellidos;
     document.getElementById('Telefono').value = Persona.telefono;
     document.getElementById('Direccion').value = Persona.direccion;
-    document.getElementById('Departamento').value = Persona.IdDept;
+    
     
     // Get the modal
     var modal = document.getElementById('myModalEditar');
-    var span = document.getElementsByTagName('span');
+    var span = document.getElementById('cerrar');
     // Get the button that opens the modal
 
    
@@ -137,18 +141,21 @@ function clikEditar(Persona) {
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
         
-        if (event.target == modal) {
+        if (event.target == cancel) {
             modal.style.display = "none";
         } else if (event.target == Edit) {
             
             modal.style.display = "none";
             //Persona.idPersona = ArrayPersonas.idPersona;
-            Persona.IdDept = document.getElementById('Departamento').value;
+            
             Persona.nombre = document.getElementById('Nombre').value;
             Persona.Apellidos = document.getElementById('Apellidos').value;
             //Persona.fechaNacimiento = ArrayPersonas.fechaNacimiento;
             Persona.direccion = document.getElementById('Direccion').value;
             Persona.telefono = document.getElementById('Telefono').value;
+            var selector = document.getElementById('mySelect');
+            var value = selector[selector.selectedIndex].value;
+            Persona.IdDept = value;
             Editar(Persona);
         }
 
@@ -164,7 +171,7 @@ function limpiar() {
     document.getElementById('ApellidosCrear').value = " ";
     document.getElementById('TelefonoCrear').value = " ";
     document.getElementById('DireccionCrear').value = " ";
-    document.getElementById('DepartamentoCrear').value = " ";
+    
 
 }
 
@@ -301,7 +308,7 @@ function clickCrear() {
    
 
     var modal = document.getElementById('myModalCrear');
-    var span = document.getElementsByTagName('span');
+    var span = document.getElementById('cruzcerrar');
     // Get the button that opens the modal
 
 
@@ -316,21 +323,23 @@ function clickCrear() {
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
-        if (event.target == modal) {
+        if (event.target == cancelar) {
             modal.style.display = "none";
         } else if (event.target == crear) {
             
             modal.style.display = "none";
             var Persona = new Object();
             //Persona.idPersona = ArrayPersonas.idPersona;
-            Persona.IdDept = document.getElementById('DepartamentoCrear').value;
+            
             Persona.nombre = document.getElementById('NombreCrear').value;
             Persona.Apellidos = document.getElementById('ApellidosCrear').value;
             var dt = new Date('8/24/2009');
             Persona.fechaNacimiento = dt;
             Persona.direccion = document.getElementById('DireccionCrear').value;
             Persona.telefono = document.getElementById('TelefonoCrear').value;
-
+            var selector = document.getElementById('mySelectCrear');
+            var value = selector[selector.selectedIndex].value;
+            Persona.IdDept = value;
             Crear(Persona);
         }
     }
@@ -378,7 +387,7 @@ function clickBorrar() {
 
     // Get the modal
     var modal = document.getElementById('myModal');
-    var span = document.getElementsByTagName('span');
+    var span = document.getElementById('cruzBorrar');
     // Get the button that opens the modal
 
 
@@ -393,7 +402,7 @@ function clickBorrar() {
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
-        if (event.target == modal) {
+        if (event.target == no) {
             modal.style.display = "none";
         } else if (event.target == si) {
           

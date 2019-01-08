@@ -31,7 +31,7 @@
         <!-- Modal content -->
         <div class="modal-content">
             <div class="modal-header">
-                <span class="close">&times;</span>
+                <span class="close" id="cruzBorrar">&times;</span>
                 <h4>¿Estas seguro de que quieres borrarla?</h4>
                 <input id="si" value="Aceptar" type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" />
                 <input id="no" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" value="Cancelar" type="button" />
@@ -58,12 +58,18 @@
                     <label for="Direccion">Direccion: </label>
                     <input class="mdl-textfield__input" type="text" id="Direccion" /><br />
 
-                    <label for="Departamento">Departamento: </label>
-                    <input class="mdl-textfield__input" type="text" id="Departamento" /><br />
+                    <label for="NombreDepartamento"> NombreDept</label>
+                    <select id="mySelect">
+                        <option selected value="0">Seleccione un dept</option>
+                        <option value="1" >Informatica 1</option>
+                        <option id="2" value="2">Medicina 2</option>
+                        <option id="3" value="3">Panaderia 3</option>
+                        <option id="4" value="4">Peluqueria 4</option>
+                    </select><br />
 
                     <div style="margin-top:10px">
                         <input id="Edit" type="button" value="Editar" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
-                        <input id="NoEdit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" value="Cancelar" type="button" />
+                        <input id="cancel" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" value="Cancelar" type="button" />
                     </div>
                 </form>
 
@@ -76,7 +82,7 @@
     <div id="myModalCrear" class="modalCrear">
         <div class="modal-contentCrear">
             <div class="modal-header">
-                <span class="close">&times;</span>
+                <span class="close" id="cruzcerrar">&times;</span>
                 <h4>Ventana Crear</h4>
                 <form>
                     <label for="Nombre">Nombre: </label>
@@ -91,12 +97,19 @@
                     <label for="Direccion">Direccion: </label>
                     <input class="mdl-textfield__input" type="text" id="DireccionCrear" /><br />
 
-                    <label for="Departamento">Departamento: </label>
-                    <input class="mdl-textfield__input" type="text" id="DepartamentoCrear" /><br />
+                    <label for="NombreDepartamento"> NombreDept</label>
+                    <select id="mySelectCrear">
+                        <option selected value="0">Seleccione un dept</option>
+                        <option value="1">Informatica 1</option>
+                        <option id="2" value="2">Medicina 2</option>
+                        <option id="3" value="3">Panaderia 3</option>
+                        <option id="4" value="4">Peluqueria 4</option>
+                    </select><br />
+
 
                     <div style="margin-top:10px">
                         <input id="crear" type="button" value="Crear" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
-                        <input id="NoCrear" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" value="Cancelar" type="button" />
+                        <input id="cancelar" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" value="Cancelar" type="button" />
                     </div>
                 </form>
             </div>

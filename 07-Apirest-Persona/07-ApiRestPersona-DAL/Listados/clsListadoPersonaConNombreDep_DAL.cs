@@ -27,7 +27,7 @@ namespace _07_ApiRestPersona_DAL.Listados
 
             //Try no obligatorio ya que esta en clase myconnection
             miConexion = connection.getConnection();
-            miComando.CommandText = "select IDPersona,nombrePersona,fechaNacimiento,telefono,direccion,nombreDepartamento from Personas inner join Departamentos on Personas.IDDepartamento = Departamentos.IDDepartamento";
+            miComando.CommandText = "select IDPersona,Personas.IDDepartamento as iddep,nombrePersona,apellidosPersona,fechaNacimiento,telefono,direccion,nombreDepartamento from Personas inner join Departamentos on Personas.IDDepartamento = Departamentos.IDDepartamento";
             miComando.Connection = miConexion;
             miLector = miComando.ExecuteReader();
 
@@ -40,7 +40,9 @@ namespace _07_ApiRestPersona_DAL.Listados
 
                     oPersona = new clsPersonaConNombreDeDepartamento();
                     oPersona.idPersona = (int)miLector["IDPersona"];
+                    oPersona.IdDept = (int)miLector["iddep"];
                     oPersona.nombre = (String)miLector["nombrePersona"];
+                    oPersona.Apellidos = (String)miLector["apellidosPersona"];
                     oPersona.fechaNacimiento = (DateTime)miLector["fechaNacimiento"];
                     oPersona.telefono = (String)miLector["telefono"];
                     oPersona.direccion = (string)miLector["direccion"];
