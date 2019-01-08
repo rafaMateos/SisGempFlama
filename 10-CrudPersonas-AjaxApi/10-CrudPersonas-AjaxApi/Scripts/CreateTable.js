@@ -109,8 +109,7 @@ function tableCreate(ListadoPersonas) {
 function clikEditar(Persona) {
 
     var selector = document.getElementById('mySelect');
-
-    selector.options[Persona.IdDept].selected = true;
+    selector.options[Persona.IdDept - 1].selected = true;
 
    
     var BotonEditar = document.getElementById('Edit');
@@ -119,6 +118,8 @@ function clikEditar(Persona) {
     document.getElementById('Apellidos').value = Persona.Apellidos;
     document.getElementById('Telefono').value = Persona.telefono;
     document.getElementById('Direccion').value = Persona.direccion;
+    var fecha = new Date(Persona.fechaNacimiento);
+    document.getElementById('fechaCrear').valueAsDate = fecha;
     
     
     // Get the modal
@@ -151,6 +152,18 @@ function clikEditar(Persona) {
             Persona.nombre = document.getElementById('Nombre').value;
             Persona.Apellidos = document.getElementById('Apellidos').value;
             //Persona.fechaNacimiento = ArrayPersonas.fechaNacimiento;
+            var fechanacimiento = document.getElementById('fechaCrear').value.toString();
+            var fechanac = new Date(fechanacimiento);
+
+            var dt = new Date(fechanacimiento);
+            var dtstring = dt.getFullYear()
+                + '-' + (dt.getMonth() + 1)
+                + '-' + (dt.getDate())
+                + ' ' + ("00")
+                + ':' + ("00")
+                + ':' + ("00");
+              
+            Persona.fechaNacimiento = dtstring;
             Persona.direccion = document.getElementById('Direccion').value;
             Persona.telefono = document.getElementById('Telefono').value;
             var selector = document.getElementById('mySelect');
@@ -305,7 +318,7 @@ function getPersona() {
 /*Funcion JS la cual nos mostrara un modal con campos a rellenar para introducir una persona*/ 
 function clickCrear() {
 
-   
+    var fechaDefect = document.getElementById("fecha").value = "2014-02-09";
 
     var modal = document.getElementById('myModalCrear');
     var span = document.getElementById('cruzcerrar');
@@ -333,8 +346,7 @@ function clickCrear() {
             
             Persona.nombre = document.getElementById('NombreCrear').value;
             Persona.Apellidos = document.getElementById('ApellidosCrear').value;
-            var dt = new Date('8/24/2009');
-            Persona.fechaNacimiento = dt;
+            Persona.fechaNacimiento = document.getElementById("fecha").value;
             Persona.direccion = document.getElementById('DireccionCrear').value;
             Persona.telefono = document.getElementById('TelefonoCrear').value;
             var selector = document.getElementById('mySelectCrear');
