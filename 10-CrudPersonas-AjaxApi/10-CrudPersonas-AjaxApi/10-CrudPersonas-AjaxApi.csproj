@@ -81,6 +81,7 @@
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\CrudPersonasAjax - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\CrudPersonasAjaxRafael - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

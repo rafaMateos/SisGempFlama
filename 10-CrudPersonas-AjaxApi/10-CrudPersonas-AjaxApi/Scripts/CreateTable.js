@@ -179,7 +179,8 @@ function Editar(Persona) {
 
     var json = JSON.stringify(Persona);
 
-    miLlamada.open("PUT", "https://rafaapirestpersona.azurewebsites.net/api/personas/");
+    miLlamada.open("PUT", "https://apirestpersonasrafael.azurewebsites.net/api/personas/");
+
     miLlamada.setRequestHeader('Content-type', 'application/json; charset=utf-8');
     
 
@@ -220,7 +221,7 @@ function getListadoPersonas() {
     //alert('Hellow da'):
     var millamada = new XMLHttpRequest();
     //millamada.open('GET', "/Default/Index");
-    millamada.open('GET', "https://rafaapirestpersona.azurewebsites.net/api/personas/");
+    millamada.open('GET', "https://apirestpersonasrafael.azurewebsites.net/api/personas/");
 
     //Mientras vienen los datos
     millamada.onreadystatechange = function () {
@@ -256,7 +257,7 @@ function getPersona() {
 
     var millamada = new XMLHttpRequest();
     //millamada.open('GET', "/Default/Index");
-    millamada.open('GET', "https://rafaapirestpersona.azurewebsites.net/api/personas/" + id);
+    millamada.open('GET', "https://apirestpersonasrafael.azurewebsites.net/api/personas/" + id);
 
     //Mientras vienen los datos
     millamada.onreadystatechange = function () {
@@ -345,7 +346,7 @@ function Crear(Persona) {
 
     var json = JSON.stringify(Persona);
 
-    miLlamada.open("POST", "https://rafaapirestpersona.azurewebsites.net/api/personas/");
+    miLlamada.open("POST", "https://apirestpersonasrafael.azurewebsites.net/api/personas/");
     miLlamada.setRequestHeader('Content-type', 'application/json; charset=utf-8');
 
 
@@ -411,7 +412,7 @@ function clickBorrar() {
         function Borrar(idPersona) {
 
             var miLlamada = new XMLHttpRequest();
-            miLlamada.open("DELETE", "https://rafaapirestpersona.azurewebsites.net/api/personas/" + idPersona);
+            miLlamada.open("DELETE", "https://apirestpersonasrafael.azurewebsites.net/api/personas/" + idPersona);
 
             //Mientras viene
             miLlamada.onreadystatechange = function () {
