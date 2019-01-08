@@ -159,7 +159,7 @@ namespace _07_ApiRestPersona_DAL.Manejadoras
             clsMyConnection connection = new clsMyConnection();
 
             miConexion = connection.getConnection();
-            miComando.CommandText = "update Personas set nombrePersona = @nombre,apellidosPersona = @apellidos,telefono = @telefono,direccion = @direccion,IDDepartamento = @Iddept where IDPersona = @id";
+            miComando.CommandText = "update Personas set nombrePersona = @nombre,@fechaNac = fechaNacimiento,apellidosPersona = @apellidos,telefono = @telefono,direccion = @direccion,IDDepartamento = @Iddept where IDPersona = @id";
             miComando.Connection = miConexion;
 
             SqlParameter param;
