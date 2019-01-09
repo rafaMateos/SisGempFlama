@@ -159,11 +159,11 @@ function clikEditar(Persona) {
             var dtstring = dt.getFullYear()
                 + '-' + (dt.getMonth() + 1)
                 + '-' + (dt.getDate())
-                + ' ' + ("00")
+                + 'T' + ("00")
                 + ':' + ("00")
                 + ':' + ("00");
-              
-            Persona.fechaNacimiento = dtstring;
+
+            Persona.fechaNacimiento = document.getElementById('fechaCrear').valueAsDate;
             Persona.direccion = document.getElementById('Direccion').value;
             Persona.telefono = document.getElementById('Telefono').value;
             var selector = document.getElementById('mySelect');
