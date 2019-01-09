@@ -98,7 +98,6 @@ function tableCreate(ListadoPersonas) {
 
     document.getElementById('gif').setAttribute('hidden', 'hidden');
 
-   
   
 }
 
