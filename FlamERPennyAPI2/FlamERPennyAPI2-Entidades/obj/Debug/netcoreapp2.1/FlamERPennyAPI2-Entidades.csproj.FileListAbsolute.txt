@@ -1,0 +1,8 @@
+C:\Users\Oscar\Desktop\Segundo DAM\ERP\Backend\FlamERPennyAPI2\FlamERPennyAPI2-Entidades\bin\Debug\netcoreapp2.1\FlamERPennyAPI2-Entidades.deps.json
+C:\Users\Oscar\Desktop\Segundo DAM\ERP\Backend\FlamERPennyAPI2\FlamERPennyAPI2-Entidades\bin\Debug\netcoreapp2.1\FlamERPennyAPI2-Entidades.dll
+C:\Users\Oscar\Desktop\Segundo DAM\ERP\Backend\FlamERPennyAPI2\FlamERPennyAPI2-Entidades\bin\Debug\netcoreapp2.1\FlamERPennyAPI2-Entidades.pdb
+C:\Users\Oscar\Desktop\Segundo DAM\ERP\Backend\FlamERPennyAPI2\FlamERPennyAPI2-Entidades\obj\Debug\netcoreapp2.1\FlamERPennyAPI2-Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Oscar\Desktop\Segundo DAM\ERP\Backend\FlamERPennyAPI2\FlamERPennyAPI2-Entidades\obj\Debug\netcoreapp2.1\FlamERPennyAPI2-Entidades.AssemblyInfoInputs.cache
+C:\Users\Oscar\Desktop\Segundo DAM\ERP\Backend\FlamERPennyAPI2\FlamERPennyAPI2-Entidades\obj\Debug\netcoreapp2.1\FlamERPennyAPI2-Entidades.AssemblyInfo.cs
+C:\Users\Oscar\Desktop\Segundo DAM\ERP\Backend\FlamERPennyAPI2\FlamERPennyAPI2-Entidades\obj\Debug\netcoreapp2.1\FlamERPennyAPI2-Entidades.dll
+C:\Users\Oscar\Desktop\Segundo DAM\ERP\Backend\FlamERPennyAPI2\FlamERPennyAPI2-Entidades\obj\Debug\netcoreapp2.1\FlamERPennyAPI2-Entidades.pdb

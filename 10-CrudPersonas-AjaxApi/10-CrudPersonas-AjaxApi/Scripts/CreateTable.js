@@ -97,8 +97,6 @@ function tableCreate(ListadoPersonas) {
     document.getElementById('divDeTabla').appendChild(tbl);
 
     document.getElementById('gif').setAttribute('hidden', 'hidden');
-
-  
 }
 
 /**
@@ -137,7 +135,6 @@ function clikEditar(Persona) {
         modal.style.display = "none";
     }
 
-   
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
         
@@ -300,8 +297,7 @@ function getPersona() {
                  Persona.fechaNacimiento = ArrayPersonas.fechaNacimiento;
                  Persona.direccion = ArrayPersonas.direccion;
                  Persona.telefono = ArrayPersonas.telefono;
-           
-    
+
                 clikEditar(Persona);
 
         }
